@@ -4,10 +4,10 @@ import { AiOutlineEye } from "react-icons/ai";
 
 const Login = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
-    const showPassword = () =>{
+    const showPassword = () => {
         setPasswordVisible(true)
     }
-    const handleLogin = event =>{
+    const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
@@ -35,19 +35,19 @@ const Login = () => {
                             Password
                         </label>
                         <div className="flex">
-                        <input
-                            type={passwordVisible ? 'text' : 'password'}
-                            name="password"
-                            className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Enter your password"
-                        />
-                        <button onClick={showPassword} className="text-white bg-blue-500 w-9 flex justify-center items-center text-2xl rounded-r-lg"><AiOutlineEye></AiOutlineEye></button>
-                            
+                            <input
+                                type={passwordVisible ? 'text' : 'password'}
+                                name="password"
+                                className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Enter your password"
+                            />
+                            <button onClick={showPassword} className="text-white bg-blue-500 w-9 flex justify-center items-center text-2xl rounded-r-lg"><AiOutlineEye></AiOutlineEye></button>
+
                         </div>
                     </div>
-                    
-                        <input type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors" value="Login" />
-                        
+
+                    <input type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors" value="Login" />
+
                     <div> </div>
                 </form>
                 <div className="flex items-center justify-center mt-6">
