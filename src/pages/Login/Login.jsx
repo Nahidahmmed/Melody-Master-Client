@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -7,12 +9,20 @@ const Login = () => {
     const showPassword = () => {
         setPasswordVisible(true)
     }
+
+    const {signIn} = useContext(AuthContext);
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value
         console.log(email, password);
+        signIn(email,password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
     }
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -31,6 +41,7 @@ const Login = () => {
                         />
                     </div>
                     <div>
+                        
                         <label htmlFor="password" className="font-medium mb-1 block">
                             Password
                         </label>
@@ -50,7 +61,9 @@ const Login = () => {
 
                     <div> </div>
                 </form>
+                <span className="text-blue-500">New Here? <Link to="/signUp" className="text-blue-700 font-semibold">Create a New Account</Link></span>
                 <div className="flex items-center justify-center mt-6">
+                    
                     <hr className="border-gray-300 flex-grow" />
                     <span className="text-gray-500 px-2">or</span>
                     <hr className="border-gray-300 flex-grow" />
