@@ -1,0 +1,130 @@
+[
+    {
+        "image": "piano.jpg",
+        "name": "Piano",
+        "instructor": "John Smith",
+        "availableSeats": 5,
+        "price": 100,
+        "studentsNumber": 15
+    },
+    {
+        "image": "guitar.jpg",
+        "name": "Guitar",
+        "instructor": "Jane Doe",
+        "availableSeats": 3,
+        "price": 50,
+        "studentsNumber": 10
+    },
+    {
+        "image": "violin.jpg",
+        "name": "Violin",
+        "instructor": "Michael Johnson",
+        "availableSeats": 2,
+        "price": 75,
+        "studentsNumber": 8
+    },
+    {
+        "image": "drums.jpg",
+        "name": "Drums",
+        "instructor": "Sarah Thompson",
+        "availableSeats": 4,
+        "price": 80,
+        "studentsNumber": 12
+    },
+    {
+        "image": "flute.jpg",
+        "name": "Flute",
+        "instructor": "David Rodriguez",
+        "availableSeats": 6,
+        "price": 60,
+        "studentsNumber": 5
+    },
+    {
+        "image": "saxophone.jpg",
+        "name": "Saxophone",
+        "instructor": "Emily Wilson",
+        "availableSeats": 3,
+        "price": 90,
+        "studentsNumber": 7
+    },
+    {
+        "image": "trumpet.jpg",
+        "name": "Trumpet",
+        "instructor": "Daniel Lee",
+        "availableSeats": 4,
+        "price": 70,
+        "studentsNumber": 9
+    },
+    {
+        "image": "cello.jpg",
+        "name": "Cello",
+        "instructor": "Olivia Clark",
+        "availableSeats": 2,
+        "price": 85,
+        "studentsNumber": 6
+    },
+    {
+        "image": "harp.jpg",
+        "name": "Harp",
+        "instructor": "Andrew Turner",
+        "availableSeats": 1,
+        "price": 120,
+        "studentsNumber": 3
+    },
+    {
+        "image": "accordion.jpg",
+        "name": "Accordion",
+        "instructor": "Sophia Hall",
+        "availableSeats": 3,
+        "price": 95,
+        "studentsNumber": 4
+    },
+    {
+        "image": "ukulele.jpg",
+        "name": "Ukulele",
+        "instructor": "William Martin",
+        "availableSeats": 4,
+        "price": 55,
+        "studentsNumber": 6
+    },
+    {
+        "image": "bass_guitar.jpg",
+        "name": "Bass Guitar",
+        "instructor": "Ethan Davis",
+        "availableSeats": 3,
+        "price": 70,
+        "studentsNumber": 5
+    },
+    {
+        "image": "clarinet.jpg",
+        "name": "Clarinet",
+        "instructor": "Ava Roberts",
+        "availableSeats": 2,
+        "price": 75,
+        "studentsNumber": 4
+    },
+    {
+        "image": "french_horn.jpg",
+        "name": "French Horn",
+        "instructor": "Liam Taylor",
+        "availableSeats": 2,
+        "price": 110,
+        "studentsNumber": 3
+    },
+    {
+        "image": "tambourine.jpg",
+        "name": "Tambourine",
+        "instructor": "Chloe Turner",
+        "availableSeats": 5,
+        "price": 40,
+        "studentsNumber": 8
+    },
+    {
+        "image": "xylophone.jpg",
+        "name": "Xylophone",
+        "instructor": "Mason Young",
+        "availableSeats": 3,
+        "price": 65,
+        "studentsNumber": 5
+    }
+]

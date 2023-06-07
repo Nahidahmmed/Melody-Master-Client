@@ -1,0 +1,156 @@
+[
+    {
+        "image": "instructor1.jpg",
+        "name": "John Smith",
+        "email": "johnsmith@example.com",
+        "numClassesTaken": 10,
+        "classesTaken": [
+            "Piano",
+            "Guitar"
+        ]
+    },
+    {
+        "image": "instructor2.jpg",
+        "name": "Jane Doe",
+        "email": "janedoe@example.com",
+        "numClassesTaken": 8,
+        "classesTaken": [
+            "Violin",
+            "Drums",
+            "Flute"
+        ]
+    },
+    {
+        "image": "instructor3.jpg",
+        "name": "Michael Johnson",
+        "email": "michaeljohnson@example.com",
+        "numClassesTaken": 12,
+        "classesTaken": [
+            "Saxophone",
+            "Trumpet",
+            "Cello"
+        ]
+    },
+    {
+        "image": "instructor4.jpg",
+        "name": "Sarah Thompson",
+        "email": "sarahthompson@example.com",
+        "numClassesTaken": 6,
+        "classesTaken": [
+            "Harp",
+            "Accordion"
+        ]
+    },
+    {
+        "image": "instructor5.jpg",
+        "name": "David Rodriguez",
+        "email": "davidrodriguez@example.com",
+        "numClassesTaken": 4,
+        "classesTaken": [
+            "Ukulele",
+            "Bass Guitar"
+        ]
+    },
+    {
+        "image": "instructor6.jpg",
+        "name": "Emily Wilson",
+        "email": "emilywilson@example.com",
+        "numClassesTaken": 7,
+        "classesTaken": [
+            "Clarinet",
+            "French Horn"
+        ]
+    },
+    {
+        "image": "instructor7.jpg",
+        "name": "Daniel Lee",
+        "email": "daniellee@example.com",
+        "numClassesTaken": 9,
+        "classesTaken": [
+            "Tambourine",
+            "Xylophone"
+        ]
+    },
+    {
+        "image": "instructor8.jpg",
+        "name": "Olivia Clark",
+        "email": "oliviaclark@example.com",
+        "numClassesTaken": 5,
+        "classesTaken": [
+            "Piano",
+            "Guitar"
+        ]
+    },
+    {
+        "image": "instructor9.jpg",
+        "name": "Sophia Hall",
+        "email": "sophiahall@example.com",
+        "numClassesTaken": 4,
+        "classesTaken": [
+            "Violin",
+            "Drums",
+            "Flute"
+        ]
+    },
+    {
+        "image": "instructor10.jpg",
+        "name": "William Martin",
+        "email": "williammartin@example.com",
+        "numClassesTaken": 6,
+        "classesTaken": [
+            "Saxophone",
+            "Trumpet",
+            "Cello"
+        ]
+    },
+    {
+        "image": "instructor11.jpg",
+        "name": "Ethan Davis",
+        "email": "ethandavis@example.com",
+        "numClassesTaken": 5,
+        "classesTaken": [
+            "Harp",
+            "Accordion"
+        ]
+    },
+    {
+        "image": "instructor12.jpg",
+        "name": "Ava Roberts",
+        "email": "avaroberts@example.com",
+        "numClassesTaken": 4,
+        "classesTaken": [
+            "Ukulele",
+            "Bass Guitar"
+        ]
+    },
+    {
+        "image": "instructor13.jpg",
+        "name": "Liam Taylor",
+        "email": "liamtaylor@example.com",
+        "numClassesTaken": 3,
+        "classesTaken": [
+            "Clarinet",
+            "French Horn"
+        ]
+    },
+    {
+        "image": "instructor14.jpg",
+        "name": "Chloe Turner",
+        "email": "chloeturner@example.com",
+        "numClassesTaken": 8,
+        "classesTaken": [
+            "Tambourine",
+            "Xylophone"
+        ]
+    },
+    {
+        "image": "instructor15.jpg",
+        "name": "Mason Young",
+        "email": "masonyoung@example.com",
+        "numClassesTaken": 5,
+        "classesTaken": [
+            "Piano",
+            "Guitar"
+        ]
+    }
+]
