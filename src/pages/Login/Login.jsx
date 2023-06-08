@@ -10,8 +10,15 @@ const Login = () => {
     const showPassword = () => {
         setPasswordVisible(true)
     }
+    const handleGoogleLogin = () => {
+        googleSignIn()
+            .then(res => {
+                console.log(res.user);
+            })
+            .catch(error => console.log(error))
+    }
 
-    const {signIn} = useContext(AuthContext);
+    const {signIn,googleSignIn} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -80,6 +87,7 @@ const Login = () => {
                     <hr className="border-gray-300 flex-grow" />
                 </div>
                 <button
+                    onClick={handleGoogleLogin}
                     className="flex items-center text-3xl rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 mx-auto mt-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors "
                 >
                     G

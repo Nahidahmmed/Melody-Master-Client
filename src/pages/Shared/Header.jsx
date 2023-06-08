@@ -6,12 +6,13 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Header = () => {
 
-    const { user,logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user?.photoURL);
 
-    const handleLogout = () =>{
+    const handleLogout = () => {
         logOut()
-        .then(() =>{})
-        .catch(err => console.log(err))
+            .then(() => { })
+            .catch(err => console.log(err))
     }
 
     const options = <>
@@ -22,28 +23,28 @@ const Header = () => {
             <Link to="/instructors">Instructors</Link>
         </li>
         <li>
-            <Link>Classes</Link>
+            <Link to="/allClasses">Classes</Link>
         </li>
         <li>
             <Link to="/login">Dashboard</Link>
         </li>
-        
-        
+
+
         {
             user ? <>
-            <li>
-            <img
-                src={user?.photoURL}
-                alt="User Profile"
-                className="w-8 h-8 rounded-full"
-            />
-        </li>
-        <li>
-            <button onClick={handleLogout} className="btn btn-sm  hover:text-white">Logout</button>
-        </li>
+                <li>
+                    <div className="avatar">
+                        <div className="w-7 rounded-full">
+                            <img className="" src={user?.photoURL} />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button onClick={handleLogout} className="btn btn-sm  hover:text-white">Logout</button>
+                </li>
             </> : <>
                 <li>
-                    <Link to="/login" className="btn btn-sm  text-white bg-gray-900 hover:btn ">Login</Link>
+                    <Link to="/login" className="btn btn-sm  text-white bg-gray-900 hover:bg-white hover:text-gray-900">Login</Link>
                 </li>
             </>
         }
@@ -61,7 +62,7 @@ const Header = () => {
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-gray-900 rounded-box w-52">
                         {options}
                     </ul>
 

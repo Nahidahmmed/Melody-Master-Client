@@ -13,7 +13,8 @@ import violin from '../../../assets/violin img.jpeg';
 
 const SliderSection = () => {
     return (
-        <Swiper
+       <div className="pt-16">
+         <Swiper
             cssMode={true}
             navigation={true}
             pagination={true}
@@ -69,6 +70,7 @@ const SliderSection = () => {
             </SwiperSlide>
 
         </Swiper>
+       </div>
     );
 };
 

@@ -8,7 +8,6 @@ import PopularInstructors from "../popularInstructors/PopularInstructors";
 const Home = () => {
     return (
         <div className="text-center text-xl">
-            this is home
             <SliderSection></SliderSection>
             <PopularClasses></PopularClasses>
             <PopularInstructors></PopularInstructors>
