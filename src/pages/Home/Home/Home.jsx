@@ -2,6 +2,7 @@
 import ExtraSection from "../ExtraSection/ExtraSection";
 import PopularClasses from "../PopularClasses/PopularClasses";
 import SliderSection from "../SliderSection/SliderSection";
+import PopularInstructors from "../popularInstructors/PopularInstructors";
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
             this is home
             <SliderSection></SliderSection>
             <PopularClasses></PopularClasses>
+            <PopularInstructors></PopularInstructors>
 
             <ExtraSection></ExtraSection>
         </div>
