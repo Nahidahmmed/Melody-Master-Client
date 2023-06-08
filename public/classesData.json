@@ -1,6 +1,6 @@
 [
     {
-        "image": "piano.jpg",
+        "image": "https://i.ibb.co/HrDGNJ6/piano-img.webp",
         "name": "Piano",
         "instructor": "John Smith",
         "availableSeats": 5,
@@ -8,7 +8,7 @@
         "studentsNumber": 15
     },
     {
-        "image": "guitar.jpg",
+        "image": "https://i.ibb.co/6wQT8Yj/giter-img2.jpg",
         "name": "Guitar",
         "instructor": "Jane Doe",
         "availableSeats": 3,
@@ -16,7 +16,7 @@
         "studentsNumber": 10
     },
     {
-        "image": "violin.jpg",
+        "image": "https://i.ibb.co/qY4pZ4y/violin-img.jpg",
         "name": "Violin",
         "instructor": "Michael Johnson",
         "availableSeats": 2,
@@ -24,7 +24,7 @@
         "studentsNumber": 8
     },
     {
-        "image": "drums.jpg",
+        "image": "https://i.ibb.co/5GVq99W/drum-img.jpg",
         "name": "Drums",
         "instructor": "Sarah Thompson",
         "availableSeats": 4,
@@ -32,7 +32,7 @@
         "studentsNumber": 12
     },
     {
-        "image": "flute.jpg",
+        "image": "https://i.ibb.co/r4Smb2j/flute-img.webp",
         "name": "Flute",
         "instructor": "David Rodriguez",
         "availableSeats": 6,
@@ -40,7 +40,7 @@
         "studentsNumber": 5
     },
     {
-        "image": "saxophone.jpg",
+        "image": "https://i.ibb.co/jTcrXYD/A-Saxophone.jpg",
         "name": "Saxophone",
         "instructor": "Emily Wilson",
         "availableSeats": 3,
@@ -48,7 +48,7 @@
         "studentsNumber": 7
     },
     {
-        "image": "trumpet.jpg",
+        "image": "https://i.ibb.co/qLQbt7Q/images.jpg",
         "name": "Trumpet",
         "instructor": "Daniel Lee",
         "availableSeats": 4,
@@ -56,7 +56,7 @@
         "studentsNumber": 9
     },
     {
-        "image": "cello.jpg",
+        "image": "https://i.ibb.co/VWPM96Y/cellist-playing-upper-range-dolce-violins-scaled.webp",
         "name": "Cello",
         "instructor": "Olivia Clark",
         "availableSeats": 2,
@@ -64,7 +64,7 @@
         "studentsNumber": 6
     },
     {
-        "image": "harp.jpg",
+        "image": "https://i.ibb.co/nPgnQpc/A6C5nWtl.jpg",
         "name": "Harp",
         "instructor": "Andrew Turner",
         "availableSeats": 1,
@@ -72,7 +72,7 @@
         "studentsNumber": 3
     },
     {
-        "image": "accordion.jpg",
+        "image": "https://i.ibb.co/J2kyLTm/accordion.jpg",
         "name": "Accordion",
         "instructor": "Sophia Hall",
         "availableSeats": 3,
@@ -80,7 +80,7 @@
         "studentsNumber": 4
     },
     {
-        "image": "ukulele.jpg",
+        "image": "https://i.ibb.co/xDN2f9v/ukulele.webp",
         "name": "Ukulele",
         "instructor": "William Martin",
         "availableSeats": 4,
@@ -88,7 +88,7 @@
         "studentsNumber": 6
     },
     {
-        "image": "bass_guitar.jpg",
+        "image": "https://i.ibb.co/J7gDJKK/bass.jpg",
         "name": "Bass Guitar",
         "instructor": "Ethan Davis",
         "availableSeats": 3,
@@ -96,7 +96,7 @@
         "studentsNumber": 5
     },
     {
-        "image": "clarinet.jpg",
+        "image": "https://i.ibb.co/WFWLjFs/clarinet.jpg",
         "name": "Clarinet",
         "instructor": "Ava Roberts",
         "availableSeats": 2,
@@ -104,7 +104,7 @@
         "studentsNumber": 4
     },
     {
-        "image": "french_horn.jpg",
+        "image": "https://i.ibb.co/PmcXt37/horn.webp",
         "name": "French Horn",
         "instructor": "Liam Taylor",
         "availableSeats": 2,
@@ -112,7 +112,7 @@
         "studentsNumber": 3
     },
     {
-        "image": "tambourine.jpg",
+        "image": "https://i.ibb.co/mvKWdGz/Tambourine.jpg",
         "name": "Tambourine",
         "instructor": "Chloe Turner",
         "availableSeats": 5,
@@ -120,7 +120,7 @@
         "studentsNumber": 8
     },
     {
-        "image": "xylophone.jpg",
+        "image": "https://i.ibb.co/1s3CXQN/Xylophone.jpg",
         "name": "Xylophone",
         "instructor": "Mason Young",
         "availableSeats": 3,
