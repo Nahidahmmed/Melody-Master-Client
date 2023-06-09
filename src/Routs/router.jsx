@@ -9,6 +9,7 @@ import InstructorsPage from "../pages/InstructorsPage/InstructorsPage";
 import AllClasses from "../pages/AllClasses/AllClasses";
 
 
+
  export const router = createBrowserRouter([
     {
       path: "/",
