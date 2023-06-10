@@ -5,13 +5,11 @@ import { useForm } from 'react-hook-form';
 
 const AddClass = () => {
     const {user} = useContext(AuthContext);
-    console.log(user);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        
         console.log(data)
     };
-    console.log(errors);
+
 
 
     
@@ -36,7 +34,8 @@ const AddClass = () => {
                             Class Image
                         </label>
                         <input type="file"
-                            className="file-input file-input-bordered w-full max-w-xs" />
+                            className="file-input file-input-bordered w-full max-w-xs"
+                            {...register("image", {required: true})} />
 
                     </div>
                 </div>
