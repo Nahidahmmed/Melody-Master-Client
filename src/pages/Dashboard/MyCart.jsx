@@ -1,13 +1,34 @@
+import Swal from "sweetalert2";
 import UseCart from "../../Hooks/UseCart";
-
+import { FaTrash } from "react-icons/fa";
 
 const MyCart = () => {
     const [carts] = UseCart();
     
     const total = carts.reduce((sum, item) =>item.price + sum, 0)
     console.log(total);
+
+    const handleDelete = (cart) =>{
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      })
+    }
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto pt-6">
   <table className="table">
     {/* head */}
     <thead>
@@ -15,43 +36,38 @@ const MyCart = () => {
         <th>
           #
         </th>
+        <th>Image</th>
         <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Instructor</th>
+        <th>price</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
-      <tr>
+      {carts.map((cart,index) => 
+        <tr className="font-semibold" key={cart._id}>
         <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
+          {index + 1}
         </th>
+        
         <td>
-          <div className="flex items-center space-x-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                <img src={cart.image} alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
-            <div>
-              <div className="font-bold">Hart Hagerty</div>
-              <div className="text-sm opacity-50">United States</div>
-            </div>
-          </div>
         </td>
         <td>
-          Zemlak, Daniel and Leannon
-          <br/>
-          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          {cart.name}
         </td>
-        <td>Purple</td>
+        <td>{cart.instructor}</td>
+        <td> ${cart.price}</td>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          <button onClick={()=> handleDelete(cart)} className="btn bg-gray-900 text-white w-8 h-7 items-center btn-xs hover:bg-red-700"><FaTrash></FaTrash></button>
         </th>
       </tr>
+        )}
+      
       
     </tbody>
   </table>
