@@ -7,8 +7,6 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    console.log(user?.photoURL);
-
     const handleLogout = () => {
         logOut()
             .then(() => { })

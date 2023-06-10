@@ -9,6 +9,8 @@ import InstructorsPage from "../pages/InstructorsPage/InstructorsPage";
 import AllClasses from "../pages/AllClasses/AllClasses";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import MyCart from "../pages/Dashboard/MyCart";
+import AllUsers from "../pages/Dashboard/AllUsers";
+import AddClass from "../pages/Dashboard/AddClass";
 
 
 
@@ -45,9 +47,17 @@ export const router = createBrowserRouter([
     element:<Dashboard></Dashboard>,
     children: [
       {
+        path: 'allUsers',
+        element: <AllUsers></AllUsers>
+      },
+      {
         path: 'myCart',
         element: <MyCart></MyCart>
-      }
+      },
+      {
+        path: 'addClass',
+        element: <AddClass></AddClass>
+      },
     ]
   },
 ]);
