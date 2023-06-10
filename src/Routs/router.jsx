@@ -12,6 +12,7 @@ import MyCart from "../pages/Dashboard/MyCart";
 
 
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -41,7 +42,7 @@ export const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>,
+    element:<Dashboard></Dashboard>,
     children: [
       {
         path: 'myCart',

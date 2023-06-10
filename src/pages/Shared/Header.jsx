@@ -25,13 +25,14 @@ const Header = () => {
         <li>
             <Link to="/allClasses">Classes</Link>
         </li>
-        <li>
-            <Link to="/dashboard/myCart">Dashboard</Link>
-        </li>
+
 
 
         {
             user ? <>
+                <li>
+                    <Link to="/dashboard/myCart">Dashboard</Link>
+                </li>
                 <li>
                     <div className="avatar">
                         <div className="w-7 rounded-full">

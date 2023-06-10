@@ -3,7 +3,7 @@ import UseCart from "../../Hooks/UseCart";
 import { FaTrash } from "react-icons/fa";
 
 const MyCart = () => {
-    const [carts] = UseCart();
+    const [carts,refetch] = UseCart();
     
     const total = carts.reduce((sum, item) =>item.price + sum, 0)
     console.log(total);
@@ -19,14 +19,24 @@ const MyCart = () => {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
-            'success'
-          )
+         fetch(`http://localhost:5000/carts/${cart._id}`,{
+            method: 'DELETE'
+         })
+         .then(res => res.json())
+         .then(data =>{
+          if (data.deletedCount > 0) {
+            refetch()
+            Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+            )
+          }
+         })
         }
       })
     }
+   
     return (
         <div className="overflow-x-auto pt-6">
   <table className="table">

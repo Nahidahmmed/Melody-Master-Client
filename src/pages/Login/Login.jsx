@@ -3,6 +3,7 @@ import { AiOutlineEye } from "react-icons/ai";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { saveUser } from "../../Hooks/SaveUser";
 
 
 const Login = () => {
@@ -13,7 +14,9 @@ const Login = () => {
     const handleGoogleLogin = () => {
         googleSignIn()
             .then(res => {
+                saveUser(res.user)
                 console.log(res.user);
+                navigate(from, {replace: true});
             })
             .catch(error => console.log(error))
     }

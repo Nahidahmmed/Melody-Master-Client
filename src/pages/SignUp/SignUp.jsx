@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineEye } from "react-icons/ai";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { saveUser } from "../../Hooks/SaveUser";
 
 
 
@@ -12,13 +13,19 @@ const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [passwordVisible, setPasswordVisible] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
     const showPassword = () => {
         setPasswordVisible(true)
     }
     const handleGoogleLogin = () => {
         googleSignIn()
             .then(res => {
+                // set user to db
                 console.log(res.user);
+                saveUser(res.user)
+                navigate(from, {replace: true});
             })
             .catch(error => console.log(error))
     }
@@ -42,7 +49,9 @@ const SignUp = () => {
                             showConfirmButton: false,
                             timer: 1500
                         })
-                        navigate('/')
+                       
+                        saveUser(result.user)
+                        navigate(from, {replace: true});
 
                     }).catch((error) => {
                         console.log(error);
