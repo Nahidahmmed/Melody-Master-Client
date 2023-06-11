@@ -9,22 +9,27 @@ const AllClasses = () => {
         setLoading(true)
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
-            .then(data => {setClasses(data) , setLoading(false)})
+            .then(data => { setClasses(data), setLoading(false) })
     }, [])
-    console.log(classes);
-    if(loading){
-        return<span className="loading loading-bars loading-lg pt-96 ml-80 pl-52"></span>
+
+    const approve = classes.filter(myItem => myItem.status === 'approve');
+    if (loading) {
+        return <span className="loading loading-bars loading-lg pt-96 ml-80 pl-52"></span>
     }
-    return (
-        <div className="py-20">
-            <p className="font-bold text-center text-5xl py-12">All Classes</p>
-            <div className="grid gap-4 pl-12 lg:grid-cols-3 md:grid-cols-2">
-            {
-                classes.map(item => <ClassesCard item={item} key={item._id}></ClassesCard>)
-            }
-        </div>
-        </div>
-    );
+
+    if (approve) {
+        return (
+            <div className="py-20">
+                <p className="font-bold text-center text-5xl py-12">All Classes</p>
+                <div className="grid gap-4 pl-12 lg:grid-cols-3 md:grid-cols-2">
+                    {
+                        approve.map(item => <ClassesCard item={item} key={item._id}></ClassesCard>)
+                    }
+                </div>
+            </div>
+        );
+    }
+
 };
 
 export default AllClasses;

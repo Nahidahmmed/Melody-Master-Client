@@ -50,6 +50,10 @@ const AddClass = () => {
     };
     console.log(errors);
 
+    if(!user){
+        return <span className="loading loading-bars loading-lg pt-96 ml-80 pl-52"></span>
+    }
+
 
 
 

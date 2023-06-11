@@ -26,7 +26,7 @@ const Dashboard = () => {
                         {
                             isAdmin ? <>
                             <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="allUsers"><FaUserEdit></FaUserEdit>Manage Users</NavLink></li>
-                            <li className="bg-gray-700 rounded hover:font-bold"><NavLink><FaScroll></FaScroll>Manage Classes</NavLink></li>
+                            <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="manageClass"><FaScroll></FaScroll>Manage Classes</NavLink></li>
                             </> : <>
                             {
                             isInstructor ? <>

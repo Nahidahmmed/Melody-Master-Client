@@ -1,8 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
+
 import Swal from "sweetalert2";
 
 
+
 const AllUsers = () => {
+
+
     const { data: users = [], refetch } = useQuery(['users'], async () => {
         const res = await fetch('http://localhost:5000/users')
         return res.json();
@@ -48,6 +52,7 @@ const AllUsers = () => {
                 }
             })
     }
+    
 
     return (
         <div className="overflow-x-auto">

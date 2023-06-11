@@ -1,4 +1,5 @@
 
+import SomeUnfo from "../../../Components/SomeInfo/SomeUnfo";
 import ExtraSection from "../ExtraSection/ExtraSection";
 import PopularClasses from "../PopularClasses/PopularClasses";
 import SliderSection from "../SliderSection/SliderSection";
@@ -11,8 +12,8 @@ const Home = () => {
             <SliderSection></SliderSection>
             <PopularClasses></PopularClasses>
             <PopularInstructors></PopularInstructors>
-
             <ExtraSection></ExtraSection>
+            <SomeUnfo></SomeUnfo>
         </div>
     );
 };
