@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaPen } from "react-icons/fa";
 
 
 
@@ -63,7 +64,11 @@ const MyClasses = () => {
                                 <th>
                                     {/* onClick={()=> handleDelete(cart)}  */}
                                     <p>{cart.status}</p>
+                                  
                                 </th>
+                                <td>
+                                <button className=" bg-gray-800 text-white p-2 rounded "><FaPen></FaPen></button>
+                                </td>
                             </tr>
                         )}
                         {approve.map((cart, index) =>
@@ -88,6 +93,9 @@ const MyClasses = () => {
                                     {/* onClick={()=> handleDelete(cart)}  */}
                                     <p>{cart.status}</p>
                                 </th>
+                                <td>
+                                <button className=" bg-gray-800 text-white p-2 rounded "><FaPen></FaPen></button>
+                                </td>
                             </tr>
                         )}
 

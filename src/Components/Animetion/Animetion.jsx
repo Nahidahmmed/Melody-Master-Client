@@ -1,24 +1,20 @@
 
-
-
 import {
-  useSpringRef,
-  animated,
-  useTransition,
-  useSpring,
-} from '@react-spring/web'
-import styles from './ExtraSection.css'
-import { useLayoutEffect, useState } from 'react';
-const IMAGES = [
-  'https://i.ibb.co/6wQT8Yj/giter-img2.jpg',
-  'https://i.ibb.co/HrDGNJ6/piano-img.webp',
-  'https://i.ibb.co/r4Smb2j/flute-img.webp',
-  'https://i.ibb.co/jTcrXYD/A-Saxophone.jpg'
-]
-
-const ExtraSection = () => {
-
-  const [activeIndex, setActiveIndex] = useState(0)
+    useSpringRef,
+    animated,
+    useTransition,
+    useSpring,
+  } from '@react-spring/web'
+  import styles from './Animetion.css'
+  import { useLayoutEffect, useState } from 'react';
+  const IMAGES = [
+    'https://i.ibb.co/J2kyLTm/accordion.jpg',
+    'https://i.ibb.co/1s3CXQN/Xylophone.jpg',
+    'https://i.ibb.co/WFWLjFs/clarinet.jpg',
+    'https://i.ibb.co/mvKWdGz/Tambourine.jpg'
+  ]
+const Animetion = () => {
+    const [activeIndex, setActiveIndex] = useState(0)
   const springApi = useSpringRef()
 
   const transitions = useTransition(activeIndex, {
@@ -61,7 +57,6 @@ const ExtraSection = () => {
   useLayoutEffect(() => {
     springApi.start()
   }, [activeIndex])
-   
     return (
         <section className="mx-auto mt-8 ">
 <div className={styles.container}>
@@ -87,4 +82,4 @@ const ExtraSection = () => {
     );
 };
 
-export default ExtraSection;
+export default Animetion;

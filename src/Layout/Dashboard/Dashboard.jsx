@@ -8,7 +8,7 @@ import logo from '../../assets/307380621_609154877573913_2533658308514740888_n.j
 const Dashboard = () => {
     // TODO:
     const isAdmin = false;
-    const isInstructor =true;
+    const isInstructor =false;
     return (
         <div>
             <Header></Header>
@@ -35,7 +35,7 @@ const Dashboard = () => {
                             </> : <>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="myCart"><BsFillCartFill></BsFillCartFill> My Selected Classes</NavLink></li>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink><BsFillBagCheckFill></BsFillBagCheckFill>My Enrolled Classes</NavLink></li>
-                                <li className="bg-gray-700  rounded hover:font-bold"><NavLink><BsWalletFill></BsWalletFill>payment history</NavLink></li>
+                                <li className="bg-gray-700  rounded hover:font-bold"><NavLink><BsWalletFill></BsWalletFill>payment</NavLink></li>
                             </>
                         }
                             </>

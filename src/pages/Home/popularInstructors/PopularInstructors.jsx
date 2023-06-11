@@ -12,7 +12,7 @@ const PopularInstructors = () => {
     return (
         <div className="">
             <h1 className="font-bold text-5xl my-12">Popular Instructors</h1>
-             <div className="grid pl-28 md:grid-cols-2 gap-4">
+             <div className="grid md:grid-cols-2 md:pl-28 gap-4">
             
             {
                 instructors.map(instructor => <div key={instructor._id} className="card text-left card-side bg-base-100 shadow-xl w-[500px]">

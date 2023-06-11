@@ -51,6 +51,7 @@ const MyCart = () => {
         <th>Instructor</th>
         <th>price</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -74,6 +75,9 @@ const MyCart = () => {
         <td> ${cart.price}</td>
         <th>
           <button onClick={()=> handleDelete(cart)} className="btn bg-gray-900 text-white w-8 h-7 items-center btn-xs hover:bg-red-700"><FaTrash></FaTrash></button>
+        </th>
+        <th>
+          <button onClick={()=> handleDelete(cart)} className="btn bg-gray-900 text-white  px-3 h-7 items-center btn-xs hover:bg-green-700"> pay</button>
         </th>
       </tr>
         )}
