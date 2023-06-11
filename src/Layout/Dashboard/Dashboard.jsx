@@ -31,7 +31,7 @@ const Dashboard = () => {
                             {
                             isInstructor ? <>
                             <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="addClass"><FaUserEdit></FaUserEdit>Add a class</NavLink></li>
-                            <li className="bg-gray-700 rounded hover:font-bold"><NavLink><FaScroll></FaScroll>My Classes</NavLink></li>
+                            <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="myClasses"><FaScroll></FaScroll>My Classes</NavLink></li>
                             </> : <>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="myCart"><BsFillCartFill></BsFillCartFill> My Selected Classes</NavLink></li>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink><BsFillBagCheckFill></BsFillBagCheckFill>My Enrolled Classes</NavLink></li>

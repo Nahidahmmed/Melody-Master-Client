@@ -3,7 +3,7 @@ import ClassesCard from "../../Components/ClassesCard/ClassesCard";
 
 const AllClasses = () => {
     const [classes, setClasses] = useState([])
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setLoading(true)

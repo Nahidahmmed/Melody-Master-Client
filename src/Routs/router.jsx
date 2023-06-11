@@ -11,6 +11,7 @@ import Dashboard from "../Layout/Dashboard/Dashboard";
 import MyCart from "../pages/Dashboard/MyCart";
 import AllUsers from "../pages/Dashboard/AllUsers";
 import AddClass from "../pages/Dashboard/AddClass";
+import MyClasses from "../pages/Dashboard/MyClasses";
 
 
 
@@ -57,6 +58,10 @@ export const router = createBrowserRouter([
       {
         path: 'addClass',
         element: <AddClass></AddClass>
+      },
+      {
+        path: 'myClasses',
+        element: <MyClasses></MyClasses>
       },
     ]
   },
