@@ -35,7 +35,7 @@ const Dashboard = () => {
                             </> : <>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="myCart"><BsFillCartFill></BsFillCartFill> My Selected Classes</NavLink></li>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink><BsFillBagCheckFill></BsFillBagCheckFill>My Enrolled Classes</NavLink></li>
-                                <li className="bg-gray-700  rounded hover:font-bold"><NavLink><BsWalletFill></BsWalletFill>payment</NavLink></li>
+                                <li className="bg-gray-700  rounded hover:font-bold"><NavLink to="payment"><BsWalletFill></BsWalletFill>payment</NavLink></li>
                             </>
                         }
                             </>
