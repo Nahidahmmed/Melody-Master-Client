@@ -1,14 +1,25 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import Header from "../../pages/Shared/Header";
 import Footer from "../../pages/Shared/Footer";
-import { BsFillCartFill, BsFillBagCheckFill, BsWalletFill, BsFillHouseDoorFill, BsCardText } from 'react-icons/Bs';
+import { BsFillCartFill, BsFillBagCheckFill,  BsFillHouseDoorFill, BsCardText } from 'react-icons/Bs';
 import { FaUserEdit,FaScroll } from "react-icons/fa";
 import logo from '../../assets/307380621_609154877573913_2533658308514740888_n.jpg';
+import { useContext, } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Dashboard = () => {
-    // TODO:
+    const navigate = useNavigate();
+    
+    const {user} = useContext(AuthContext);
+   
+
+
+
     const isAdmin = false;
     const isInstructor =false;
+    if(!user){
+        navigate('/')
+    }
     return (
         <div>
             <Header></Header>
@@ -35,7 +46,7 @@ const Dashboard = () => {
                             </> : <>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="myCart"><BsFillCartFill></BsFillCartFill> My Selected Classes</NavLink></li>
                                 <li className="bg-gray-700 rounded hover:font-bold"><NavLink><BsFillBagCheckFill></BsFillBagCheckFill>My Enrolled Classes</NavLink></li>
-                                <li className="bg-gray-700  rounded hover:font-bold"><NavLink to="payment"><BsWalletFill></BsWalletFill>payment</NavLink></li>
+                                
                             </>
                         }
                             </>
