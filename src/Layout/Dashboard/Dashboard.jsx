@@ -17,10 +17,6 @@ const Dashboard = () => {
 
 const [isAdmin] = UseAdmin();
 const [isInstructor] = UseInstructor();
-
-    // const isAdmin = true;
-
-    // const isInstructor =false;
     if(!user){
         navigate('/')
     }
@@ -55,12 +51,7 @@ const [isInstructor] = UseInstructor();
                         }
                             </>
                         }
-                        
-
-
-
                         <li></li>
-
                         <hr className="pt-3 " />
                         <li className="mt-5 bg-gray-700 rounded hover:font-bold "><NavLink to="/"><BsFillHouseDoorFill></BsFillHouseDoorFill>Home</NavLink></li>
                         <li className="bg-gray-700 rounded hover:font-bold"><NavLink to="/allClasses"><BsCardText></BsCardText>Classes</NavLink></li>

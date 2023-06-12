@@ -1,22 +1,23 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 const CheckoutForm = ({ price }) => {
     const stripe = useStripe();
     const elements = useElements();
-    const [clientSecret, setClientSecret] = useState("");
+    const [clientSecret, setClientSecret] = useState('');
+    const [axiosSecure] = useAxiosSecure()
     const {user} = useContext(AuthContext);
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost:5000/carts/create-payment-intent", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({id: price }),
+        axiosSecure.post('/create-payment-intent',{price})
+        .then(res => {
+            console.log(res.data.clientSecret);
+            setClientSecret(JSON.stringify(res.data.clientSecret))
+            console.log(clientSecret);
         })
-            .then((res) => res.json())
-            .then((data) => setClientSecret(data.clientSecret));
     }, []);
 
     const handleSubmit = async (event) => {
