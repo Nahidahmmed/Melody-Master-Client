@@ -15,7 +15,7 @@ const Dashboard = () => {
 
 
 
-    const isAdmin = false;
+    const isAdmin = true;
     const isInstructor =false;
     if(!user){
         navigate('/')
