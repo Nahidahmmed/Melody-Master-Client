@@ -6,6 +6,8 @@ import { FaUserEdit,FaScroll } from "react-icons/fa";
 import logo from '../../assets/307380621_609154877573913_2533658308514740888_n.jpg';
 import { useContext, } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import UseAdmin from "../../Hooks/UseAdmin";
+import UseInstructor from "../../Hooks/UseInstructor";
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -13,10 +15,12 @@ const Dashboard = () => {
     const {user} = useContext(AuthContext);
    
 
+const [isAdmin] = UseAdmin();
+const [isInstructor] = UseInstructor();
 
+    // const isAdmin = true;
 
-    const isAdmin = true;
-    const isInstructor =false;
+    // const isInstructor =false;
     if(!user){
         navigate('/')
     }
