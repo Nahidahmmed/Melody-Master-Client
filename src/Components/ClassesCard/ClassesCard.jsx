@@ -14,7 +14,7 @@ const ClassesCard = ({ item }) => {
         console.log(item);
         if (user && user.email) {
             const addedClass = {addClassid: item._id,name:item.name, image:item.image, price: item.price, instructor:item.instructor,studentsNumber:item.studentsNumber,availableSeats:item.availableSeats,email:user.email}
-            fetch('http://localhost:5000/carts', {
+            fetch('https://assignment12-server-nahidahmmed.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type':'application/json'

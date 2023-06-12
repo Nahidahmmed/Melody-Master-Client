@@ -24,7 +24,7 @@ const AddClass = () => {
                     const imgURL = imageResponse.data.display_url;
                     const { availableSeats, email, instructorName, name, price } = data;
                     const newItem = { name, price: parseFloat(price), instructor: instructorName, email, availableSeats, image: imgURL, status: 'pending' }
-                    fetch('http://localhost:5000/classes', {
+                    fetch('https://assignment12-server-nahidahmmed.vercel.app/classes', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'
