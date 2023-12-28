@@ -11,12 +11,12 @@ const ManageClass = () => {
 
     // useEffect(() => {
     //     setLoading(true)
-    //     fetch('https://assignment12-server-nahidahmmed.vercel.app/classes')
+    //     fetch('http://localhost:5000/classes')
     //         .then(res => res.json())
     //         .then(data => {setClasses(data) , setLoading(false)})
     // }, [])
     const { data: classes = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch('https://assignment12-server-nahidahmmed.vercel.app/classes')
+        const res = await fetch('http://localhost:5000/classes')
         return res.json();
     })
 
@@ -27,7 +27,7 @@ const ManageClass = () => {
 
     const handleApprove = (cart) =>{
         console.log(cart);
-        fetch(`https://assignment12-server-nahidahmmed.vercel.app/classes/approve/${cart._id}`, {
+        fetch(`http://localhost:5000/classes/approve/${cart._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -48,7 +48,7 @@ const ManageClass = () => {
     }
     const handleDenied = (cart) =>{
         console.log(cart);
-        fetch(`https://assignment12-server-nahidahmmed.vercel.app/classes/denied/${cart._id}`, {
+        fetch(`http://localhost:5000/classes/denied/${cart._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

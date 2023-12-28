@@ -1,17 +1,24 @@
 
-
+import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
 const ClassCard = ({item}) => {
     return (
-        <div className="card w-96 bg-base-100 shadow-xl image-full h-60">
-            <figure><img src={item.image} alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="text-left text-3xl">{item.name}</h2>
-                <p className="text-left">Students: {item.studentsNumber}</p>
-                <p className="text-left">Available Seats: {item.availableSeats}</p>
-                <div className="card-actions text-left">
-                    <p>instructor: {item.instructor}</p>
-                </div>
-            </div>
+        <div className=" bg-base-100">
+            <Card className="py-4">
+      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+        <p className="text-tiny uppercase font-bold">{item.name}</p>
+        <small className="text-default-500">Students: {item.studentsNumber}</small>
+        <small className="text-default-500">Available Seats: {item.availableSeats}</small>
+        <h4 className="font-bold text-large">instructor: {item.instructor}</h4>
+      </CardHeader>
+      <CardBody className="overflow-visible py-2">
+        <Image
+          alt="Card background"
+          className="object-cover rounded-xl"
+          src={item.image}
+          width={270}
+        />
+      </CardBody>
+    </Card>
         </div>
     );
 };

@@ -11,7 +11,7 @@ const MyClasses = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch('https://assignment12-server-nahidahmmed.vercel.app/classes')
+        fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => { setClasses(data), setLoading(false) })
     }, [])

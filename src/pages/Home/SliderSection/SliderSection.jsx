@@ -1,77 +1,269 @@
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import piano from '../../../assets/piano img.webp';
-import Trumpet from '../../../assets/images.jpg';
-import drum from '../../../assets/drums-1.jpg';
-import flute from '../../../assets/flut img.jpg';
-import getter from '../../../assets/giter img2.jpg';
-import violin from '../../../assets/violin img.jpeg';
-
+/* eslint-disable no-undef */
+import { useState, useEffect, useRef } from "react";
+import "./SliderSection.css";
+import image1 from "../../../assets/music class image/image1.jpg";
+import image2 from "../../../assets/music class image/image2.jpg";
+import image3 from "../../../assets/music class image/image3.jpg";
+import image4 from "../../../assets/music class image/image4.jpg";
 const SliderSection = () => {
-    return (
-       <div className="pt-24 md:pt-16">
-         <Swiper
-            cssMode={true}
-            navigation={true}
-            pagination={true}
-            mousewheel={true}
-            keyboard={true}
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-            className="mySwiper"
-        >
-            <SwiperSlide>
-                <img className="md:w-[1400px] md:h-[500px]" src={violin} alt="" />
-                <div className="-mt-60 md:-mt-80 text-left pl-12 text-white font-semibold w-2/3">
-                    <h1 className="text-4xl mb-3"> The Violin Class</h1>
-                    <p>
-                        The violin is a string instrument that is played with a bow. It belongs to the family of bowed string instruments, which also includes the viola, cello, and double bass. The violin is renowned for its beautiful and expressive sound, and it is widely used in classical music, as well as in various other genres such as folk, jazz, and popular music.</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <img className="w-[1400px] md:h-[500px]" src={drum} alt="" />
-                <div className="-mt-80 text-left pl-12 text-white font-semibold w-2/3">
-                    <h1 className="text-4xl mb-3"> The Drum Class</h1>
-                    <p>
-                        Drums are musical instruments that produce sound by the vibration of a stretched membrane known as a drumhead or drum skin. They belong to the percussion family and are one of the oldest known instruments in the world, with evidence of drum-like instruments dating back thousands of years.</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <img className="w-[1400px] md:h-[500px]" src={flute} alt="" />
-                <div className="-mt-80 text-left pl-12 text-white font-semibold w-2/3">
-                    <h1 className="text-4xl mb-3"> The Flute Class</h1>
-                    <p>
-                        The flute is a musical instrument belonging to the woodwind family. It is one of the oldest and most widely used instruments in the world. Flutes are known for their distinct sound and their ability to produce a wide range of tones and melodies.</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <img className="w-[1400px] md:h-[500px]" src={getter} alt="" />
-                <div className="-mt-80 text-left pl-12 text-white font-semibold w-2/3">
-                    <h1 className="text-4xl mb-3"> The guitar Class</h1>
-                    <p>The guitar is a popular musical instrument that belongs to the chordophone family. It typically features a flat-bodied structure with a long fretted neck and six strings, although there are variations with more or fewer strings. The strings are usually plucked or strummed with the fingers or a pick to produce sound.</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <img className="md:h-[500px]" src={piano} alt="" />
-                <div className="-mt-80 text-left pl-12 text-white font-semibold w-2/3">
-                    <h1 className="text-4xl mb-3"> The Piano Class</h1>
-                    <p>The piano is a versatile and widely recognized musical instrument that belongs to the keyboard family. It produces sound by striking strings with hammers when keys are pressed.</p>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <img className="w-[1400px] md:h-[500px]" src={Trumpet} alt="" />
-                <div className="-mt-80 text-left pl-12 text-white font-semibold w-2/3">
-                    <h1 className="text-4xl mb-3"> The Trumpet Class</h1>
-                    <p>The trumpet is a majestic brass instrument that commands attention with its brilliant and powerful sound. With a history dating back thousands of years, it has evolved into a versatile instrument capable of captivating audiences across genres and cultures. From its ancient origins in civilizations like Egypt and Rome to its modern form with valves, the trumpet has retained its timeless appeal. Whether soaring through the melodies of classical symphonies, jazz improvisations, or thrilling fanfares</p>
-                </div>
-            </SwiperSlide>
+  const [timeRunning] = useState(3000);
+  const [timeAutoNext] = useState(5000);
+  // eslint-disable-next-line no-unused-vars
+  const [currentIndex, setCurrentIndex] = useState(null);
 
-        </Swiper>
-       </div>
+  const nextRef = useRef(null);
+  const prevRef = useRef(null);
+  const carouselRef = useRef(null);
+  const sliderRef = useRef(null);
+  const thumbnailBorderRef = useRef(null);
+  const timeRef = useRef(null);
+  let runTimeOut;
+  let runNextAuto;
+
+  useEffect(() => {
+    const handleNextClick = () => showSlider("next");
+    const handlePrevClick = () => showSlider("prev");
+
+    nextRef.current = document.getElementById("next");
+    prevRef.current = document.getElementById("prev");
+    carouselRef.current = document.querySelector(".carousel");
+    sliderRef.current = carouselRef.current.querySelector(".carousel .list");
+    thumbnailBorderRef.current = document.querySelector(".carousel .thumbnail");
+    timeRef.current = document.querySelector(".carousel .time");
+
+    thumbnailBorderRef.current.appendChild(
+      thumbnailBorderRef.current.querySelectorAll(".item")[0]
     );
+
+    nextRef.current.addEventListener("click", handleNextClick);
+    prevRef.current.addEventListener("click", handlePrevClick);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    runNextAuto = setTimeout(() => {
+      handleNextClick();
+    }, timeAutoNext);
+
+    return () => {
+      clearTimeout(runNextAuto);
+      nextRef.current.removeEventListener("click", handleNextClick);
+      prevRef.current.removeEventListener("click", handlePrevClick);
+    };
+  }, []);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      showSlider("next");
+    }, timeAutoNext);
+
+    return () => clearTimeout(timeoutId);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex]);
+
+  const showSlider = (type) => {
+    const sliderItems = sliderRef.current.querySelectorAll(
+      ".carousel .list .item"
+    );
+    const thumbnailItems = document.querySelectorAll(
+      ".carousel .thumbnail .item"
+    );
+
+    if (type === "next") {
+      sliderRef.current.appendChild(sliderItems[0]);
+      thumbnailBorderRef.current.appendChild(thumbnailItems[0]);
+      carouselRef.current.classList.add("next");
+    } else {
+      sliderRef.current.prepend(sliderItems[sliderItems.length - 1]);
+      thumbnailBorderRef.current.prepend(
+        thumbnailItems[thumbnailItems.length - 1]
+      );
+      carouselRef.current.classList.add("prev");
+    }
+
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
+      carouselRef.current.classList.remove("next");
+      carouselRef.current.classList.remove("prev");
+    }, timeRunning);
+
+    clearTimeout(runNextAuto);
+    runNextAuto = setTimeout(() => {
+      handleNextClick();
+    }, timeAutoNext);
+  };
+  return (
+    <div className="carousel">
+      <div className="list">
+        <div className="item">
+          <img src={image1} alt="" />
+          <div className="content">
+            <div className="author">LUNDEV</div>
+            <div className="title">DESIGN SLIDER</div>
+            <div className="topic">ANIMAL</div>
+            <div className="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div className="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+        <div className="item">
+          <img src={image2} alt="" />
+          <div className="content">
+            <div className="author">LUNDEV</div>
+            <div className="title">DESIGN SLIDER</div>
+            <div className="topic">ANIMAL</div>
+            <div className="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div className="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+        <div className="item">
+          <img src={image3} alt="" />
+          <div className="content">
+            <div className="author">LUNDEV</div>
+            <div className="title">DESIGN SLIDER</div>
+            <div className="topic">ANIMAL</div>
+            <div className="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div className="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+        <div className="item">
+          <img src={image4} alt="" />
+          <div className="content">
+            <div className="author">LUNDEV</div>
+            <div className="title">DESIGN SLIDER</div>
+            <div className="topic">ANIMAL</div>
+            <div className="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div className="buttons">
+              <button>SEE MORE</button>
+              <button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="thumbnail">
+        <div className="item">
+          <img src={image1} alt="" />
+          <div className="content">
+            <div className="title">Name Slider</div>
+            <div className="description">Description</div>
+          </div>
+        </div>
+        <div className="item">
+          <img src={image2} alt="" />
+          <div className="content">
+            <div className="title">Name Slider</div>
+            <div className="description">Description</div>
+          </div>
+        </div>
+        <div className="item">
+          <img src={image3} alt="" />
+          <div className="content">
+            <div className="title">Name Slider</div>
+            <div className="description">Description</div>
+          </div>
+        </div>
+        <div className="item">
+          <img src={image4} alt="" />
+          <div className="content">
+            <div className="title">Name Slider</div>
+            <div className="description">Description</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="arrows">
+        <ul className="wrapper">
+          <li className="icon black" ref={prevRef} id="prev">
+            <span className="tooltip">Previous</span>
+            <span>
+              <svg
+                viewBox="0 0 16 16"
+                className="bi bi-chevron-double-left"
+                fill="currentColor"
+                height="16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  fillRule="evenodd"
+                ></path>
+                <path
+                  d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                  fillRule="evenodd"
+                ></path>
+              </svg>
+            </span>
+          </li>
+          <li className="icon black" ref={nextRef} id="next">
+            <span className="tooltip">Next</span>
+            <span>
+              <svg
+                viewBox="0 0 16 16"
+                className="bi bi-chevron-double-right"
+                fill="currentColor"
+                height="16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"
+                  fillRule="evenodd"
+                ></path>
+                <path
+                  d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"
+                  fillRule="evenodd"
+                ></path>
+              </svg>
+            </span>
+          </li>
+        </ul>
+        {/* <button ref={prevRef} id="prev">
+          {"<"}
+        </button>
+        <button ref={nextRef} id="next">
+          {">"}
+        </button> */}
+      </div>
+
+      <div ref={timeRef} className="time"></div>
+    </div>
+  );
 };
 
 export default SliderSection;

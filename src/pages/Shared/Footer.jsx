@@ -1,12 +1,12 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaYoutube, FaInstagram } from 'react-icons/fa';
-import logo from '../../assets/307380621_609154877573913_2533658308514740888_n.jpg';
+
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-10">
     <div className="container mx-auto flex flex-col md:flex-row justify-between px-4">
       <div className="flex flex-col items-center md:items-start">
-        <img src={logo} alt="Website Logo" className="w-36 rounded mb-4 " />
+        {/* <img src={logo} alt="Website Logo" className="w-36 rounded mb-4 " /> */}
         <p className="text-sm">© 2023 Your Website. All rights reserved.</p>
       </div>
       <div className="flex flex-col items-center md:items-end">
