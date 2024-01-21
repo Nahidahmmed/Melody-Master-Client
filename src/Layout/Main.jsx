@@ -6,8 +6,11 @@ import Header from "../pages/Shared/Header";
 
 const Main = () => {
     return (
-        <div>
+        <div className="w-full min-h-screen">
+            <div className="w-full fixed z-10">
+                
             <Header></Header>
+            </div>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

@@ -34,7 +34,7 @@ const Header = () => {
       <Link className="Button" to="/">Home</Link>
     </li>,
     <li>
-      <Link className="Button" to="/instructors">Instructors</Link>
+      <Link className="Button" to={'/instructors'}>Instructors</Link>
     </li>,
     <li>
       <Link className="Button" to="/allClasses">Classes</Link>
@@ -54,7 +54,7 @@ const Header = () => {
        
   ];
   return (
-    <div className="w-full fixed z-10">
+    <div>
       <div className="bg-black bg-opacity-60 lg:h-14 text-white p-4 flex pt-7">
         <h1 className="lg:flex lg:gap-2 lg:items-center lg:font-semibold lg:text-base lg:pl-10 hidden">
           <FaPhone></FaPhone> <span>+088 01533175945</span>

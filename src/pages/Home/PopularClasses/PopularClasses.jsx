@@ -14,14 +14,14 @@ const PopularClasses = () => {
     }, [])
 
     if (loading) {
-        return <span className="loading loading-bars loading-lg pt-96 ml-80 pl-52"></span>
+        return <span className="loading loading-bars loading-lg pt-96 ml-auto pl-52"></span>
     }
 
     console.log(classes);
     return (
-        <div>
+        <div className="lg:ml-[4%]">
             <h1 className="font-bold text-5xl my-12">Popular Classes</h1>
-            <div className="grid gap-8 pl-9 md:grid-cols-3">
+            <div className="grid md:grid-cols-3">
 
                 {
                     classes.map(item => <ClassCard key={item._id} item={item}></ClassCard>)

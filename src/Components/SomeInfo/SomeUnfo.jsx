@@ -3,7 +3,7 @@
 const SomeUnfo = () => {
     return (
         <div className="bg-gray-800 py-12 mt-11">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className=" px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-3xl leading-8 font-extrabold text-white sm:text-4xl">
             Summer Camp Learning School!

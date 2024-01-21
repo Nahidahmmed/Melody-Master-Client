@@ -1,20 +1,11 @@
 .parent {
-    width: 100%;
-    perspective: 1000px;
+    perspective: 1200px;
   }
   
   .card {
-    /* border-radius: 10px; */
-    height: 400px;
+    height: 380px;
     border: 3px solid rgb(255, 255, 255);
     transform-style: preserve-3d;
-    background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
-        repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#ffffff 0 18.75%);
-    
-    background-position: 0 0, 0 0;
-    background-color: #f0f0f0;
-    width: 100%;
-    box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
     transition: all 0.5s ease-in-out;
   }
   
@@ -24,7 +15,7 @@
   }
   
   .content-box {
-    height: 80%;
+    height: 100%;
     
     /* border-radius: 10px 100px 10px 10px; */
     transition: all 0.5s ease-in-out;
@@ -34,7 +25,7 @@
   
   .content-box .card-title {
     display: inline-block;
-    margin-top: 10px;
+    margin-left:30px;
     color: white;
     font-size: 25px;
     font-weight: 900;
@@ -47,7 +38,9 @@
   }
   
   .content-box .card-content {
+    width: 53%;
     margin-top: 15px;
+    margin-left: 25px;
     font-size: 12px;
     font-weight: 700;
     color: #f2f2f2;
@@ -61,7 +54,9 @@
   
   .content-box .see-more {
     cursor: pointer;
+    text-align: center;
     margin-top: 1rem;
+    margin-left: 20px;
     display: inline-block;
     font-weight: 800;
     font-size: 12px;

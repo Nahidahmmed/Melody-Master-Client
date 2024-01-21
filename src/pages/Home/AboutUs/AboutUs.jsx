@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import "./AboutUs.css";
 export default function AboutUs() {
   return (
-    <div className="lg:flex w-full mx-40 bg-white mt-48">
-      <div className="w-2/4 pr-14">
+    <div className="lg:flex container w-full mx-auto bg-white mt-48">
+      <div className="lg:w-[50%] px-14">
         <h2 className="text-xl font-bold text-[#3081D0]">
           about the music school
         </h2>
@@ -19,29 +19,25 @@ export default function AboutUs() {
           Unleash Your Creative Potential Through Music. Embrace the Magic of
           Musical Expression Dramatically Morph Reliable Experiences Without
           Strategic Methodologies. Quickly Create Frictionless Strategic Theme
-          Areas. Immerse Yourself In the World of Music. Explore New Sounds and
-          Vibrations. Discover the Art of Harmonious Melodies. Join a Community
-          of Music Enthusiasts. Experience the Power of Rhythm and Beats.
-          Unleash Your Creative Potential Through Music. Embrace the Magic of
-          Musical Expression
+          Areas.
         </p>
         <button className="btn bg-[#CD1818] mt-5 border-none text-white">
           LEARN MORE
         </button>
       </div>
-      <div className="w-[50%]">
-        <div className="parent">
+      <div className="lg:w-[50%] mr-14 mt-12">
+        <div className="parent w-full">
           <div
-            className="card "
+            className="card lg:w-[100%]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/94Zzx9K/image2.jpg)",
             }}
           >
             <div className="content-box">
-              <span className="card-title">3D Card</span>
+              <span className="card-title">About Us</span>
               <p className="card-content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                You can learn more about our music class in melody master.
               </p>
               <Link className="see-more rounded-lg w-28">See More</Link>
             </div>
