@@ -1,130 +1,413 @@
 [
-    {
-        "image": "https://i.ibb.co/HrDGNJ6/piano-img.webp",
-        "name": "Piano",
-        "instructor": "John Smith",
-        "availableSeats": 5,
-        "price": 100,
-        "studentsNumber": 15
-    },
-    {
-        "image": "https://i.ibb.co/6wQT8Yj/giter-img2.jpg",
-        "name": "Guitar",
-        "instructor": "Jane Doe",
-        "availableSeats": 3,
-        "price": 50,
-        "studentsNumber": 10
-    },
-    {
-        "image": "https://i.ibb.co/qY4pZ4y/violin-img.jpg",
-        "name": "Violin",
-        "instructor": "Michael Johnson",
-        "availableSeats": 2,
-        "price": 75,
-        "studentsNumber": 8
-    },
-    {
-        "image": "https://i.ibb.co/5GVq99W/drum-img.jpg",
-        "name": "Drums",
-        "instructor": "Sarah Thompson",
-        "availableSeats": 4,
-        "price": 80,
-        "studentsNumber": 12
-    },
-    {
-        "image": "https://i.ibb.co/r4Smb2j/flute-img.webp",
-        "name": "Flute",
-        "instructor": "David Rodriguez",
-        "availableSeats": 6,
-        "price": 60,
-        "studentsNumber": 5
-    },
-    {
-        "image": "https://i.ibb.co/jTcrXYD/A-Saxophone.jpg",
-        "name": "Saxophone",
-        "instructor": "Emily Wilson",
-        "availableSeats": 3,
-        "price": 90,
-        "studentsNumber": 7
-    },
-    {
-        "image": "https://i.ibb.co/qLQbt7Q/images.jpg",
-        "name": "Trumpet",
-        "instructor": "Daniel Lee",
-        "availableSeats": 4,
-        "price": 70,
-        "studentsNumber": 9
-    },
-    {
-        "image": "https://i.ibb.co/VWPM96Y/cellist-playing-upper-range-dolce-violins-scaled.webp",
-        "name": "Cello",
-        "instructor": "Olivia Clark",
-        "availableSeats": 2,
-        "price": 85,
-        "studentsNumber": 6
-    },
-    {
-        "image": "https://i.ibb.co/nPgnQpc/A6C5nWtl.jpg",
-        "name": "Harp",
-        "instructor": "Andrew Turner",
-        "availableSeats": 1,
-        "price": 120,
-        "studentsNumber": 3
-    },
-    {
-        "image": "https://i.ibb.co/J2kyLTm/accordion.jpg",
-        "name": "Accordion",
-        "instructor": "Sophia Hall",
-        "availableSeats": 3,
-        "price": 95,
-        "studentsNumber": 4
-    },
-    {
-        "image": "https://i.ibb.co/xDN2f9v/ukulele.webp",
-        "name": "Ukulele",
-        "instructor": "William Martin",
-        "availableSeats": 4,
-        "price": 55,
-        "studentsNumber": 6
-    },
-    {
-        "image": "https://i.ibb.co/J7gDJKK/bass.jpg",
-        "name": "Bass Guitar",
-        "instructor": "Ethan Davis",
-        "availableSeats": 3,
-        "price": 70,
-        "studentsNumber": 5
-    },
-    {
-        "image": "https://i.ibb.co/WFWLjFs/clarinet.jpg",
-        "name": "Clarinet",
-        "instructor": "Ava Roberts",
-        "availableSeats": 2,
-        "price": 75,
-        "studentsNumber": 4
-    },
-    {
-        "image": "https://i.ibb.co/PmcXt37/horn.webp",
-        "name": "French Horn",
-        "instructor": "Liam Taylor",
-        "availableSeats": 2,
-        "price": 110,
-        "studentsNumber": 3
-    },
-    {
-        "image": "https://i.ibb.co/mvKWdGz/Tambourine.jpg",
-        "name": "Tambourine",
-        "instructor": "Chloe Turner",
-        "availableSeats": 5,
-        "price": 40,
-        "studentsNumber": 8
-    },
-    {
-        "image": "https://i.ibb.co/1s3CXQN/Xylophone.jpg",
-        "name": "Xylophone",
-        "instructor": "Mason Young",
-        "availableSeats": 3,
-        "price": 65,
-        "studentsNumber": 5
-    }
-]
+    
+      {
+        "class_name": "Songwriting Workshop",
+        "class_description": "Explore the art of songwriting, from lyric creation to melody composition. Suitable for aspiring songwriters of all levels.",
+        "instructor": {
+          "instructor_id": 103,
+          "instructor_name": "Sophie Miller",
+          "instructor_bio": "Award-winning songwriter and experienced music producer.",
+          "instructor_email": "sophie.miller@gmail.com",
+          "instructor_image": "https://i.ibb.co/1d1Zqd4/jon.jpg"
+        },
+        "schedule": {
+          "day": "Tuesday",
+          "time": "7:00 PM - 8:30 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 3,
+        "class_image": "https://i.ibb.co/9v3csxc/woman-play-guitar-write-song-music-reheaesal.jpg",
+        "class_location": "Online",
+        "class_duration": "6 weeks",
+        "class_cost": "$79.99",
+        "class_prerequisites": ["Basic understanding of music theory"],
+        "class_curriculum": [
+          "Fundamentals of lyric writing",
+          "Melody and chord progressions",
+          "Structuring a song",
+          "Feedback sessions on student compositions"
+        ],
+        "class_materials": [
+          "Notebook and pen",
+          "Recording device or software",
+          "Instrument (optional)"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and optional musical instrument for practice."
+      },
+      {
+        "class_name": "Electronic Music Production",
+        "class_description": "Learn the basics of creating electronic music, from synthesizers to digital audio workstations (DAWs). No prior experience required.",
+        "instructor": {
+          "instructor_id": 104,
+          "instructor_name": "Alex Turner",
+          "instructor_bio": "Electronic music producer with a focus on innovation and creativity.",
+          "instructor_email": "alex.turner@gmail.com",
+          "instructor_image": "https://i.ibb.co/vm6P4kj/jane.jpg"
+        },
+        "schedule": {
+          "day": "Thursday",
+          "time": "8:00 PM - 9:30 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 4,
+        "class_image": "https://i.ibb.co/d0nDpqH/kids-being-part-sunday-school.jpg",
+        "class_location": "Online",
+        "class_duration": "12 weeks",
+        "class_cost": "$149.99",
+        "class_prerequisites": ["None"],
+        "class_curriculum": [
+          "Introduction to synthesizers and electronic instruments",
+          "Understanding DAWs and MIDI controllers",
+          "Arrangement and production techniques",
+          "Final project: Creating an original electronic track"
+        ],
+        "class_materials": [
+          "Computer with a digital audio workstation (DAW)",
+          "MIDI controller (optional)",
+          "Headphones"
+        ],
+        "equipment_requirements": "Students need access to a computer with a digital audio workstation and a stable internet connection."
+      },
+      {
+        "class_name": "Vocal Techniques and Performance",
+        "class_description": "Enhance your vocal skills and stage presence, suitable for singers of all levels. Focus on breath control, pitch, and expressive performance.",
+        "instructor": {
+          "instructor_id": 105,
+          "instructor_name": "Olivia Davis",
+          "instructor_bio": "Vocal coach and professional singer with a versatile vocal range.",
+          "instructor_email": "olivia.davis@gmail.com",
+          "instructor_image": "https://i.ibb.co/bLsGP0p/micchel.jpg"
+        },
+        "schedule": {
+          "day": "Saturday",
+          "time": "2:00 PM - 3:30 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 5,
+        "class_image": "https://i.ibb.co/0t4r156/young-people-singing-playing-piano-live-radio.jpg",
+        "class_location": "Online",
+        "class_duration": "10 weeks",
+        "class_cost": "$119.99",
+        "class_prerequisites": ["None"],
+        "class_curriculum": [
+          "Breathing exercises and vocal warm-ups",
+          "Pitch control and range expansion",
+          "Stage presence and performance techniques",
+          "Individual performance evaluations"
+        ],
+        "class_materials": [
+          "Notebook and pen",
+          "Backing tracks for practice",
+          "Webcam for virtual performances"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and a webcam for virtual performances."
+      },
+      {
+        "class_name": "Music Theory Fundamentals",
+        "class_description": "Build a strong foundation in music theory, covering key concepts such as scales, chords, and harmony. Suitable for all musicians.",
+        "instructor": {
+          "instructor_id": 106,
+          "instructor_name": "Michael Johnson",
+          "instructor_bio": "Music educator with a passion for simplifying complex music theory concepts.",
+          "instructor_email": "michael.johnson@gmail.com",
+          "instructor_image": "https://i.ibb.co/ThyfQKc/sarah.jpg"
+        },
+        "schedule": {
+          "day": "Monday",
+          "time": "5:30 PM - 7:00 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 6,
+        "class_image": "https://i.ibb.co/vV9KQPJ/three-sound-engineers-working-together.jpg",
+        "class_location": "Online",
+        "class_duration": "8 weeks",
+        "class_cost": "$89.99",
+        "class_prerequisites": ["None"],
+        "class_curriculum": [
+          "Understanding musical notes and scales",
+          "Chord construction and progressions",
+          "Introduction to basic harmony",
+          "Application of music theory in composition"
+        ],
+        "class_materials": [
+          "Notebook and pen",
+          "Music theory textbook (recommended)",
+          "Virtual piano for interactive learning"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and a virtual piano for interactive learning."
+      },
+      {
+        "class_name": "Acoustic Folk Singing",
+        "class_description": "Immerse yourself in the world of acoustic folk singing, focusing on traditional and contemporary folk songs. All vocal levels welcome.",
+        "instructor": {
+          "instructor_id": 107,
+          "instructor_name": "Daniel Thompson",
+          "instructor_bio": "Folk singer-songwriter with a deep connection to traditional acoustic music.",
+          "instructor_email": "daniel.thompson@gmail.com",
+          "instructor_image": "https://i.ibb.co/kKkTH2b/david.jpg"
+        },
+        "schedule": {
+          "day": "Wednesday",
+          "time": "6:30 PM - 8:00 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 7,
+        "class_image": "https://i.ibb.co/HHrQPyH/high-angle-people-making-music.jpg",
+        "class_location": "Online",
+        "class_duration": "10 weeks",
+        "class_cost": "$109.99",
+        "class_prerequisites": ["None"],
+        "class_curriculum": [
+          "Exploring traditional and contemporary folk songs",
+          "Developing a unique folk singing style",
+          "Vocal ornamentation and expression",
+          "Group performance of folk classics"
+        ],
+        "class_materials": [
+          "Notebook and pen",
+          "List of recommended folk songs",
+          "Backing tracks for practice"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and backing tracks for practice."
+      },
+      {
+        "class_name": "Jazz Improvisation",
+        "class_description": "Dive into the world of jazz improvisation, covering scales, chord progressions, and improvisational techniques. Prior knowledge of basic music theory recommended.",
+        "instructor": {
+          "instructor_id": 108,
+          "instructor_name": "David Parker",
+          "instructor_bio": "Jazz pianist and composer with extensive experience in improvisation.",
+          "instructor_email": "david.parker@gmail.com",
+          "instructor_image": "https://i.ibb.co/r4sywDs/harry.webp"
+        },
+        "schedule": {
+          "day": "Friday",
+          "time": "8:30 PM - 10:00 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 8,
+        "class_image": "https://i.ibb.co/ZcdPmQS/group-students-playing-double-bass-drum-set-piano.jpg",
+        "class_location": "Online",
+        "class_duration": "12 weeks",
+        "class_cost": "$139.99",
+        "class_prerequisites": ["Basic understanding of music theory, familiarity with jazz standards"],
+        "class_curriculum": [
+          "Jazz scales and modes",
+          "Chord voicings and progressions",
+          "Approaches to jazz improvisation",
+          "Group improvisation sessions"
+        ],
+        "class_materials": [
+          "Notebook and pen",
+          "List of jazz standards",
+          "Backing tracks for improvisation"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection, a musical instrument (preferably a piano, guitar, or saxophone), and backing tracks for improvisation."
+      },
+      {
+        "class_name": "Flute for Beginners",
+        "class_description": "Embark on your journey of learning the flute, covering essential techniques and simple melodies. No prior flute experience required.",
+        "instructor": {
+          "instructor_id": 109,
+          "instructor_name": "Lily Rodriguez",
+          "instructor_bio": "Flutist and music educator specializing in beginner flute instruction.",
+          "instructor_email": "lily.rodriguez@gmail.com",
+          "instructor_image": "https://i.ibb.co/BT2fSX3/Tambourine.jpg"
+        },
+        "schedule": {
+          "day": "Saturday",
+          "time": "10:00 AM - 11:30 AM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 9,
+        "class_image": "https://i.ibb.co/Dz1rYsp/people-celebrating-jazz-day-event.jpg",
+        "class_location": "Online",
+        "class_duration": "6 weeks",
+        "class_cost": "$69.99",
+        "class_prerequisites": ["None"],
+        "class_curriculum": [
+          "Flute anatomy and assembly",
+          "Basic fingerings and breath control",
+          "Playing simple tunes and exercises",
+          "Introduction to music notation for flute"
+        ],
+        "class_materials": [
+          "Flute (student-grade or rental)",
+          "Cleaning supplies for the flute",
+          "Notebook and pen"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and a flute (student-grade or rental) for practice."
+      },
+      {
+        "class_name": "Latin Percussion Ensemble",
+        "class_description": "Immerse yourself in the vibrant world of Latin percussion, covering various instruments and rhythmic patterns. Suitable for all percussion enthusiasts.",
+        "instructor": {
+          "instructor_id": 110,
+          "instructor_name": "Carlos Martinez",
+          "instructor_bio": "Percussionist and expert in Latin percussion ensemble performance.",
+          "instructor_email": "carlos.martinez@gmail.com",
+          "instructor_image": "https://i.ibb.co/GpVWDbw/clark.jpg"
+        },
+        "schedule": {
+          "day": "Thursday",
+          "time": "6:00 PM - 7:30 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 10,
+        "class_image": "https://i.ibb.co/xsx9CLM/side-view-musicians-working-studio.jpg",
+        "class_location": "Online",
+        "class_duration": "8 weeks",
+        "class_cost": "$89.99",
+        "class_prerequisites": ["Basic understanding of rhythm"],
+        "class_curriculum": [
+          "Introduction to various Latin percussion instruments",
+          "Rhythmic patterns and ensemble playing",
+          "Performance of popular Latin percussion compositions",
+          "Improvisation and collaboration"
+        ],
+        "class_materials": [
+          "Latin percussion instruments (congas, bongos, etc.)",
+          "Drumsticks and hand percussion tools",
+          "Notebook and pen"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and Latin percussion instruments for practice."
+      },
+      {
+        "class_name": "Bass Guitar Mastery",
+        "class_description": "Unlock the secrets of playing the bass guitar, from groovy basslines to advanced techniques. Suitable for bassists of all skill levels.",
+        "instructor": {
+          "instructor_id": 111,
+          "instructor_name": "Marcus Johnson",
+          "instructor_bio": "Renowned bassist with extensive experience in various music genres.",
+          "instructor_email": "marcus.johnson@example.com",
+          "instructor_image": "https://i.ibb.co/1qpM1F5/Cello.webp"
+        },
+        "schedule": {
+          "day": "Tuesday",
+          "time": "5:30 PM - 7:00 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 11,
+        "class_image": "https://i.ibb.co/NybzHNC/man-working-music-studio-with-instruments.jpg",
+        "class_location": "Online",
+        "class_duration": "10 weeks",
+        "class_cost": "$109.99",
+        "class_prerequisites": ["Basic understanding of guitar or music theory"],
+        "class_curriculum": [
+          "Fundamentals of bass guitar playing",
+          "Groovy basslines and rhythm",
+          "Advanced bass techniques",
+          "Jam sessions and live performance tips"
+        ],
+        "class_materials": [
+          "4-string or 5-string bass guitar",
+          "Bass amplifier or headphones",
+          "Notebook and pen"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and a bass guitar with amplifier or headphones for practice."
+      },
+      {
+        "class_name": "Harmony in Jazz Piano",
+        "class_description": "Explore the art of harmonizing melodies and creating lush chords in jazz piano. Recommended for intermediate to advanced pianists.",
+        "instructor": {
+          "instructor_id": 112,
+          "instructor_name": "Elena Rodriguez",
+          "instructor_bio": "Jazz pianist and composer known for intricate harmonic arrangements.",
+          "instructor_email": "elena.rodriguez@example.com",
+          "instructor_image": "https://i.ibb.co/6ndwNX2/Accordion.jpg"
+        },
+        "schedule": {
+          "day": "Thursday",
+          "time": "7:00 PM - 8:30 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 12,
+        "class_image": "https://i.ibb.co/d07Wbyd/side-view-teacher-playing-piano.jpg",
+        "class_location": "Online",
+        "class_duration": "12 weeks",
+        "class_cost": "$129.99",
+        "class_prerequisites": ["Proficiency in basic jazz piano skills"],
+        "class_curriculum": [
+          "Advanced jazz chord voicings",
+          "Harmonic analysis of jazz standards",
+          "Creating effective jazz piano arrangements",
+          "Group improvisation and ensemble playing"
+        ],
+        "class_materials": [
+          "Acoustic or digital piano/keyboard",
+          "Sheet music of jazz standards",
+          "Ear training exercises"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and an acoustic or digital piano/keyboard for practice."
+      },
+      {
+        "class_name": "World Drumming Ensemble",
+        "class_description": "Immerse yourself in the diverse rhythms and percussion techniques from around the world. No prior drumming experience required.",
+        "instructor": {
+          "instructor_id": 113,
+          "instructor_name": "Sara Ahmed",
+          "instructor_bio": "Percussionist with a passion for world music and cross-cultural collaboration.",
+          "instructor_email": "sara.ahmed@example.com",
+          "instructor_image": "https://i.ibb.co/WHzYwW5/Ukulele.webp"
+        },
+        "schedule": {
+          "day": "Saturday",
+          "time": "3:00 PM - 4:30 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 13,
+        "class_image": "https://i.ibb.co/C7B7zsX/musician-band-jamming-together-art-workplace-with-instruments.jpg",
+        "class_location": "Online",
+        "class_duration": "8 weeks",
+        "class_cost": "$99.99",
+        "class_prerequisites": ["None"],
+        "class_curriculum": [
+          "Introduction to various world percussion instruments",
+          "Rhythmic patterns from different cultures",
+          "Ensemble playing and improvisation",
+          "Group performance of world music compositions"
+        ],
+        "class_materials": [
+          "World percussion instruments (djembe, congas, etc.)",
+          "Drumsticks and hand percussion tools",
+          "Notebook and pen"
+        ],
+        "equipment_requirements": "Students need access to a computer or tablet with a stable internet connection and world percussion instruments (djembe, congas, etc.) for practice."
+      },
+      {
+        "class_name": "Digital Music Production Masterclass",
+        "class_description": "Dive into the world of digital music production, covering software, sound design, and advanced production techniques. Suitable for all levels.",
+        "instructor": {
+          "instructor_id": 114,
+          "instructor_name": "Nathan Carter",
+          "instructor_bio": "Producer and sound engineer specializing in electronic and hip-hop genres.",
+          "instructor_email": "nathan.carter@example.com",
+          "instructor_image": "https://i.ibb.co/2tXVxPc/Clarinet.jpg"
+        },
+        "schedule": {
+          "day": "Wednesday",
+          "time": "6:30 PM - 8:00 PM",
+          "timezone": "UTC"
+        },
+        "number_of_students": 14,
+        "class_image": "https://i.ibb.co/LzCqTVN/side-view-musician-working-studio.jpg",
+        "class_location": "Online",
+        "class_duration": "10 weeks",
+        "class_cost": "$119.99",
+        "class_prerequisites": ["Basic understanding of music production software"],
+        "class_curriculum": [
+          "Exploring digital audio workstations (DAWs)",
+          "Sound design and synthesis techniques",
+          "Arrangement and mixing strategies",
+          "Final project: Producing an original track"
+        ],
+        "class_materials": [
+          "Computer with a digital audio workstation (DAW)",
+          "Virtual instruments and plugins",
+          "Headphones"
+        ],
+        "equipment_requirements": "Students need access to a computer with a digital audio workstation and a stable internet connection."
+      }
+    
+    ]
+  

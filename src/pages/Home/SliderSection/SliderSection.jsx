@@ -44,6 +44,7 @@ const SliderSection = () => {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     runNextAuto = setTimeout(() => {
       showSlider('next');
     }, timeAutoNext);

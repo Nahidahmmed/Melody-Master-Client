@@ -11,7 +11,7 @@ const AllClasses = () => {
             .then(res => res.json())
             .then(data => { setClasses(data), setLoading(false) })
     }, [])
-
+    console.log(classes[0])
     const approve = classes.filter(myItem => myItem.status === 'approve');
     if (loading) {
         return <span className="loading loading-bars loading-lg pt-96 ml-80 pl-52"></span>
