@@ -15,6 +15,7 @@ import MyClasses from "../pages/Dashboard/MyClasses";
 import ManageClass from "../pages/Dashboard/ManageClass";
 import Payment from "../pages/Dashboard/Payment";
 import ErrorePage from "../Components/errorePage";
+import ClassDetail from "../pages/ClassDetail/ClassDetail";
 
 
 
@@ -44,6 +45,11 @@ export const router = createBrowserRouter([
       {
         path: '/allClasses',
         element: <AllClasses></AllClasses>
+      },
+      {
+        path: '/detail/:id',
+        element: <ClassDetail></ClassDetail>,
+        loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
       },
     ]
   },
