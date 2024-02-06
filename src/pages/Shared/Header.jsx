@@ -1,16 +1,11 @@
 /* eslint-disable react/jsx-key */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
-import { Tooltip } from "@nextui-org/react";
-import { FaPhone,FaMusic } from "react-icons/fa6";
+
+import { FaMusic } from "react-icons/fa6";
 import {
-  FaRegEnvelope,
-  FaFacebook,
-  FaFlickr,
-  FaInstagram,
-  FaLock,
-  FaUser,
+  
   FaSearch,
 } from "react-icons/fa";
 import "./Header/Header.css"
@@ -22,10 +17,25 @@ const Header = () => {
   //     .then(() => {})
   //     .catch((err) => console.log(err));
   // };
+  const [classes, setClasses] = useState([]);
+  useEffect(() => {
+    
+    fetch("http://localhost:5000/classes")
+      .then((res) => res.json())
+      .then((data) => {
+        setClasses(data);
+        
+      });
+  }, []);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const [isSearchVisible, setSearchVisible] = useState(false);
+
+  const toggleSearch = () => {
+    setSearchVisible(!isSearchVisible);
   };
 
 
@@ -53,46 +63,104 @@ const Header = () => {
         
        
   ];
+  const [searchTerm, setSearchTerm] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  
+
+  const handleInputChange = (e) => {
+    const inputText = e.target.value;
+    setSearchTerm(inputText);
+    const filteredSuggestions =
+      inputText !== ""
+        ? classes.filter((Class) =>
+        Class.class_name.toLowerCase().startsWith(inputText.toLowerCase())
+          )
+        : [];
+
+    setSuggestions(filteredSuggestions);
+  };
+
+  const handleSuggestionClick = (selectedCountry) => {
+    setSearchTerm(selectedCountry.class_name);
+    setSuggestions([]);
+  };
   return (
-    <div>
-      <div className="bg-black bg-opacity-60 lg:h-14 text-white p-4 flex pt-7">
-        <h1 className="lg:flex lg:gap-2 lg:items-center lg:font-semibold lg:text-base lg:pl-10 hidden">
-          <FaPhone></FaPhone> <span>+088 01533175945</span>
-        </h1>
-        <h1 className="lg:flex hidden lg:gap-2 lg:items-center lg:text-base lg:font-semibold lg:pl-10">
-          <FaRegEnvelope></FaRegEnvelope> <span>nahidahmmed411@gmail.com</span>
-        </h1>
-        <div className="text-[#3081D0] gap-3 lg:ml-auto flex text-xl">
-          <Tooltip placement={"top"} content="facebook">
-            <button>
-              <FaFacebook></FaFacebook>
+    <div className="absolute z-50 w-full bg-black bg-opacity-60 lg:h-[85px] text-white p-4">
+      <div className="flex items-center justify-between pt-3">
+        <div className="flex items-center space-x-4">
+          <div className="group relative">
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden focus:outline-none"
+            >
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 mt-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
             </button>
-          </Tooltip>
-          <Tooltip placement={"top"} content="flicker">
-            <button>
-              <FaFlickr></FaFlickr>
-            </button>
-          </Tooltip>
-          <Tooltip placement={"top"} content="instagram">
-            <button>
-              <FaInstagram></FaInstagram>
-            </button>
-          </Tooltip>
+            {isMenuOpen && (
+              <ul className="mt-[28px] z-10 p-2 shadow bg-black bg-opacity-80 rounded w-52 absolute">
+                {menuItems}
+              </ul>
+            )}
+          </div>
+          <Link to={"/"} className="lg:text-3xl text-lg flex items-center">
+            <FaMusic className="mr-3"></FaMusic>
+            <span className="text-[#3081D0] mr-2">Travel</span>Master
+          </Link>
         </div>
-        <div className="flex items-center lg:mx-14 ml-32 text-base font-semibold">
-          <Link className="flex items-center gap-2 mx-2">
-            <FaLock className="text-[#3081D0]"></FaLock> Login
-          </Link>
-          <Link className="flex items-center gap-2">
-            <FaUser className="text-[#3081D0]"></FaUser> Sign Up
-          </Link>
+
+        <div className="hidden lg:flex">
+          <ul className="flex gap-6">{menuItems}</ul>
+        </div>
+
+        <div className="text-xl lg:pr-2 flex items-center">
+          {/* input */}
+          <div className="container border-b-2">
+            <div className="mainbox lg:w-[230px]">
+              <div className="iconContainer">
+                <button onClick={toggleSearch}>
+                  <FaSearch className="w-9" />
+                </button>
+              </div>
+              <input
+                className="search_input w-[120px] lg:w-[185px]"
+                placeholder="search"
+                name="search"
+                type="text"
+                value={searchTerm}
+                onChange={handleInputChange}
+              />
+            </div>
+            {suggestions.length > 0 && (
+              <ul className="lg:w-[230px] w-[160px] mt-[1px] lg:mt-[123px] text-sm mr-10 p-3 shadow bg-black bg-opacity-60 rounded-b-xl absolute">
+                {suggestions.slice(0, 8).map((Class, index) => (
+                  <li
+                    key={index}
+                    onClick={() => handleSuggestionClick(Class)}
+                  >
+                    <button className="pb-2">{Class.class_name}</button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
-      <div className="bg-black bg-opacity-60 lg:h-24 text-white p-4">
-        <div className="flex items-center justify-between pt-3">
-          <div className="flex items-center space-x-4">
-            <div className="group relative">
-              <button
+    </div>
+  );
+};
+{/* <button
                 onClick={toggleMenu}
                 className="btn btn-ghost lg:hidden focus:outline-none"
               >
@@ -109,33 +177,5 @@ const Header = () => {
                     strokeWidth="2"
                     d="M4 6h16M4 12h8m-8 6h16"
                   />
-                </svg>
-              </button>
-              {isMenuOpen && (
-                <ul className="mt-[17px] z-10 p-2 shadow bg-black bg-opacity-40 rounded-box w-52 absolute">
-                  {menuItems}
-                </ul>
-              )}
-            </div>
-            <Link to={"/"} className="btn btn-ghost text-3xl flex items-center">
-              <FaMusic className="mr-3"></FaMusic>{" "}
-              <span className="text-[#3081D0] mr-2">Melody</span>Master
-            </Link>
-          </div>
-
-          <div className="hidden lg:flex">
-            <ul className="flex gap-6">
-              {menuItems}
-            </ul>
-          </div>
-
-          <div className="text-xl pr-5 lg:pr-12">
-            <FaSearch></FaSearch>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
+                </svg> */}
 export default Header;
