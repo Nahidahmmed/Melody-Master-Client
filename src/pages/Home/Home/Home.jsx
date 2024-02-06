@@ -11,7 +11,6 @@ const Home = () => {
         <div >
 
             <SliderSection></SliderSection>
-            
             <AboutUs></AboutUs>
             <PopularClasses></PopularClasses>
             <PopularInstructors></PopularInstructors>
@@ -19,7 +18,6 @@ const Home = () => {
             <div className="md:flex">
            <ThankYou></ThankYou>
             </div>
-            
             <SomeUnfo></SomeUnfo>
         </div>
     );

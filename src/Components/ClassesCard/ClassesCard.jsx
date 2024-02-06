@@ -55,7 +55,6 @@ const ClassesCard = ({ item }) => {
             <div className="card-body">
                 <h2 className="card-title"></h2>
                 <p className="text-lg">Instructor : </p>
-                <p className="font-semibold">Available seats: </p>
                 <p className="font-semibold">Price: $</p>
                 <div className="card-actions justify-end">
                     <button onClick={() => handleAddToCart(item)} className="btn text-white bg-gray-900 hover:bg-white hover:text-gray-900">Select</button>
