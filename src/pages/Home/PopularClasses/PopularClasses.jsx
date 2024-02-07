@@ -14,7 +14,23 @@ const PopularClasses = () => {
     }, [])
 
     if (loading) {
-        return <span className="loading loading-bars loading-lg pt-96 ml-auto pl-52"></span>
+        return <div className="pt-[25%] pb-[20%]">
+        <div className="Container mx-auto">
+          <div className="plate pl-3">
+            <div className="black">
+              <div className="border">
+                <div className="white">
+                  <div className="center"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="player">
+            <div className="rect"></div>
+            <div className="circ"></div>
+          </div>
+        </div>
+      </div>
     }
 
     console.log(classes);

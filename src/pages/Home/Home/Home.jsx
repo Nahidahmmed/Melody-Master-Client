@@ -8,10 +8,11 @@ import PopularInstructors from "../popularInstructors/PopularInstructors";
 
 const Home = () => {
     return (
-        <div >
+        <div>
 
             <SliderSection></SliderSection>
-            <AboutUs></AboutUs>
+           <div className="max-w-screen-xl mx-auto">
+           <AboutUs></AboutUs>
             <PopularClasses></PopularClasses>
             <PopularInstructors></PopularInstructors>
             <h1 className="text-5xl font-bold my-12 text-center">Some of our instruments</h1>
@@ -19,6 +20,7 @@ const Home = () => {
            <ThankYou></ThankYou>
             </div>
             <SomeUnfo></SomeUnfo>
+           </div>
         </div>
     );
 };

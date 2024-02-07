@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ClassCard from "../../Components/ClassCard/ClassCard";
 import "./AllClasses.css";
 import Class_Image from "../../assets/music class image/image6.jpg";
-import Banner from "../../Components/banner/Banner";
+import Banner from "../../Components/Banner/Banner";
 
 const AllClasses = () => {
   const [classes, setClasses] = useState([]);

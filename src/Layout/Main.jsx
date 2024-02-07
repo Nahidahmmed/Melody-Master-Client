@@ -6,7 +6,7 @@ import Header from "../pages/Shared/Header";
 
 const Main = () => {
     return (
-        <div className="w-full min-h-screen">
+        <div className="min-h-screen">
             <div className="w-full">
                 
             <Header></Header>
