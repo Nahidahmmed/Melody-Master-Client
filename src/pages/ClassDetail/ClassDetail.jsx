@@ -19,7 +19,7 @@ function ClassDetail() {
   } = classData;
 
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden py-24">
+    <div className="bg-white shadow-md rounded-lg overflow-hidden pt-24 ">
       <div className="lg:flex lg:flex-wrap">
         <img className="lg:w-1/2 h-64 lg:h-auto object-cover object-center" src={class_image} alt={class_name} />
         <div className="lg:w-1/2 p-6">
@@ -82,7 +82,7 @@ function ClassDetail() {
           </div>
           <p className="text-gray-700">{equipment_requirements}</p>
           <div className="mt-6">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Enroll Now
             </button>
           </div>
