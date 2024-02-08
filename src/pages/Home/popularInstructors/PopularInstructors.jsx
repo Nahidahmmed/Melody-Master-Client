@@ -13,7 +13,7 @@ const PopularInstructors = () => {
   return (
     <div className="">
       <h1 className="font-bold text-5xl my-12">Popular Instructors</h1>
-      <div className="grid md:grid-cols-3">
+      <div className="grid md:grid-cols-3 gap-3">
         {instructors.map((instructor) => (
           <InstructorCard key={instructor._id} instructor={instructor}></InstructorCard>
         ))}

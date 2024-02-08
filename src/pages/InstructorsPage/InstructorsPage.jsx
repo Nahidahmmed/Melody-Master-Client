@@ -36,7 +36,7 @@ const InstructorsPage = () => {
     );
   }
   return (
-    <div>
+    <div className="w-full">
       <Banner
         tittle={"Meet Our Expert Instructors, Masters in Their Craft"}
         text={
@@ -44,7 +44,7 @@ const InstructorsPage = () => {
         }
         image={BannerImage}
       ></Banner>
-      <div className="grid md:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 pt-24 max-w-screen-xl mx-auto">
         {instructors.map((instructor) => (
           <InstructorCard key={instructor._id} instructor={instructor}></InstructorCard>
         ))}
