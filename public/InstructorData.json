@@ -1,185 +1,156 @@
 [
-    {
-        "image": "https://i.ibb.co/1d1Zqd4/jon.jpg",
-        "name": "John Smith",
-        "email": "johnsmith@example.com",
-        "numClassesTaken": 10,
-        "classesTaken": [
-            "Piano"
-        ],
-        "numStudents": 12
-
-    },
-    {
-        "image": "https://i.ibb.co/vm6P4kj/jane.jpg",
-        "name": "Jane Doe",
-        "email": "janedoe@example.com",
-        "numClassesTaken": 8,
-        "classesTaken": [
-            "Violin",
-            "Drums",
-            "Flute"
-        ],
-        "numStudents": 26
-
-    },
-    {
-        "image": "https://i.ibb.co/bLsGP0p/micchel.jpg",
-        "name": "Michael Johnson",
-        "email": "michaeljohnson@example.com",
-        "numClassesTaken": 12,
-        "classesTaken": [
-            "Saxophone",
-            "Trumpet",
-            "Cello"
-        ],
-        "numStudents": 32
-
-    },
-    {
-        "image": "https://i.ibb.co/ThyfQKc/sarah.jpg",
-        "name": "Sarah Thompson",
-        "email": "sarahthompson@example.com",
-        "numClassesTaken": 6,
-        "classesTaken": [
-            "Harp",
-            "Accordion"
-        ],
-        "numStudents": 22
-
-    },
-    {
-        "image": "https://i.ibb.co/kKkTH2b/david.jpg",
-        "name": "David Rodriguez",
-        "email": "davidrodriguez@example.com",
-        "numClassesTaken": 4,
-        "classesTaken": [
-            "Ukulele",
-            "Bass Guitar"
-        ],
-        "numStudents": 18
-
-    },
-    {
-        "image": "https://i.ibb.co/r4sywDs/harry.webp",
-        "name": "Emily Wilson",
-        "email": "emilywilson@example.com",
-        "numClassesTaken": 7,
-        "classesTaken": [
-            "Clarinet",
-            "French Horn"
-        ],
-        "numStudents": 27
-
-    },
-    {
-        "image": "https://i.ibb.co/BT2fSX3/Tambourine.jpg",
-        "name": "Daniel Lee",
-        "email": "daniellee@example.com",
-        "numClassesTaken": 9,
-        "classesTaken": [
-            "Tambourine",
-            "Xylophone"
-        ],
-        "numStudents": 11
-
-    },
-    {
-        "image": "https://i.ibb.co/GpVWDbw/clark.jpg",
-        "name": "Olivia Clark",
-        "email": "oliviaclark@example.com",
-        "numClassesTaken": 5,
-        "classesTaken": [
-            "Piano",
-            "Guitar"
-        ],
-        "numStudents": 12
-
-    },
-    {
-        "image": "https://i.ibb.co/xXrBphk/drum.webp",
-        "name": "Sophia Hall",
-        "email": "sophiahall@example.com",
-        "numClassesTaken": 4,
-        "classesTaken": [
-            "Violin",
-            "Drums",
-            "Flute"
-        ],
-        "numStudents": 8
-
-    },
-    {
-        "image": "https://i.ibb.co/1qpM1F5/Cello.webp",
-        "name": "William Martin",
-        "email": "williammartin@example.com",
-        "numClassesTaken": 6,
-        "classesTaken": [
-            "Saxophone",
-            "Trumpet",
-            "Cello"
-        ],
-        "numStudents": 20
-
-    },
-    {
-        "image": "https://i.ibb.co/6ndwNX2/Accordion.jpg",
-        "name": "Ethan Davis",
-        "email": "ethandavis@example.com",
-        "numClassesTaken": 5,
-        "classesTaken": [
-            "Harp",
-            "Accordion"
-        ],
-        "numStudents": 14
-
-    },
-    {
-        "image": "https://i.ibb.co/WHzYwW5/Ukulele.webp",
-        "name": "Ava Roberts",
-        "email": "avaroberts@example.com",
-        "numClassesTaken": 4,
-        "classesTaken": [
-            "Ukulele",
-            "Bass Guitar"
-        ],
-        "numStudents": 4
-
-    },
-    {
-        "image": "https://i.ibb.co/2tXVxPc/Clarinet.jpg",
-        "name": "Liam Taylor",
-        "email": "liamtaylor@example.com",
-        "numClassesTaken": 3,
-        "classesTaken": [
-            "Clarinet",
-            "French Horn"
-        ],
-        "numStudents": 13
-
-    },
-    {
-        "image": "https://i.ibb.co/0qHg986/Flute.jpg",
-        "name": "Chloe Turner",
-        "email": "chloeturner@example.com",
-        "numClassesTaken": 8,
-        "classesTaken": [
-            "Tambourine",
-            "Xylophone"
-        ],
-        "numStudents": 3
-
-    },
-    {
-        "image": "https://i.ibb.co/PCnwNH8/Guitar.webp",
-        "name": "Mason Young",
-        "email": "masonyoung@example.com",
-        "numClassesTaken": 5,
-        "classesTaken": [
-            "Piano",
-            "Guitar"
-        ],
-        "numStudents": 12
-
-    }
+  {
+    "name": "John Doe",
+    "class": "Introduction to Computer Science",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "office": "Room 101",
+    "office_hours": "Monday and Wednesday, 2:00 PM - 4:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/1d1Zqd4/jon.jpg"
+  },
+  {
+    "name": "Jane Smith",
+    "class": "Data Structures and Algorithms",
+    "email": "jane.smith@example.com",
+    "phone": "987-654-3210",
+    "office": "Room 202",
+    "office_hours": "Tuesday and Thursday, 10:00 AM - 12:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/vm6P4kj/jane.jpg"
+  },
+  {
+    "name": "Michael Johnson",
+    "class": "Advanced Database Systems",
+    "email": "michael.johnson@example.com",
+    "phone": "555-123-4567",
+    "office": "Room 303",
+    "office_hours": "Wednesday and Friday, 1:00 PM - 3:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/bLsGP0p/micchel.jpg"
+  },
+  {
+    "name": "Emily Brown",
+    "class": "Software Engineering",
+    "email": "emily.brown@example.com",
+    "phone": "333-999-8888",
+    "office": "Room 404",
+    "office_hours": "Monday and Thursday, 9:00 AM - 11:00 AM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/ThyfQKc/sarah.jpg"
+  },
+  {
+    "name": "David Wilson",
+    "class": "Network Security",
+    "email": "david.wilson@example.com",
+    "phone": "111-222-3333",
+    "office": "Room 505",
+    "office_hours": "Tuesday and Friday, 3:00 PM - 5:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/kKkTH2b/david.jpg"
+  },
+  {
+    "name": "Sarah Martinez",
+    "class": "Web Development",
+    "email": "sarah.martinez@example.com",
+    "phone": "444-555-6666",
+    "office": "Room 606",
+    "office_hours": "Monday and Wednesday, 11:00 AM - 1:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/r4sywDs/harry.webp"
+  },
+  {
+    "name": "Daniel Thompson",
+    "class": "Operating Systems",
+    "email": "daniel.thompson@example.com",
+    "phone": "777-888-9999",
+    "office": "Room 707",
+    "office_hours": "Wednesday and Thursday, 10:00 AM - 12:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/BT2fSX3/Tambourine.jpg"
+  },
+  {
+    "name": "Jessica Davis",
+    "class": "Human-Computer Interaction",
+    "email": "jessica.davis@example.com",
+    "phone": "222-333-4444",
+    "office": "Room 808",
+    "office_hours": "Monday and Friday, 1:00 PM - 3:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/GpVWDbw/clark.jpg"
+  },
+  {
+    "name": "Kevin Rodriguez",
+    "class": "Computer Graphics",
+    "email": "kevin.rodriguez@example.com",
+    "phone": "666-777-8888",
+    "office": "Room 909",
+    "office_hours": "Tuesday and Thursday, 2:00 PM - 4:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/xXrBphk/drum.webp"
+  },
+  {
+    "name": "Amanda Wilson",
+    "class": "Mobile App Development",
+    "email": "amanda.wilson@example.com",
+    "phone": "999-888-7777",
+    "office": "Room 1010",
+    "office_hours": "Wednesday and Friday, 9:00 AM - 11:00 AM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/1qpM1F5/Cello.webp"
+  },
+  {
+    "name": "Robert Lee",
+    "class": "Cloud Computing",
+    "email": "robert.lee@example.com",
+    "phone": "123-456-7890",
+    "office": "Room 1111",
+    "office_hours": "Tuesday and Thursday, 1:00 PM - 3:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/WHzYwW5/Ukulele.webp"
+  },
+  {
+    "name": "Karen Clark",
+    "class": "Data Mining",
+    "email": "karen.clark@example.com",
+    "phone": "987-654-3210",
+    "office": "Room 1212",
+    "office_hours": "Monday and Wednesday, 10:00 AM - 12:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/2tXVxPc/Clarinet.jpg"
+  },
+  {
+    "name": "Christopher Scott",
+    "class": "Cybersecurity",
+    "email": "christopher.scott@example.com",
+    "phone": "555-123-4567",
+    "office": "Room 1313",
+    "office_hours": "Tuesday and Thursday, 3:00 PM - 5:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/0qHg986/Flute.jpg"
+  },
+  {
+    "name": "Stephanie Taylor",
+    "class": "Software Testing",
+    "email": "stephanie.taylor@example.com",
+    "phone": "333-999-8888",
+    "office": "Room 1414",
+    "office_hours": "Wednesday and Friday, 11:00 AM - 1:00 PM",
+    "department": "Computer Science",
+    "university": "University of Example",
+    "image": "https://i.ibb.co/PCnwNH8/Guitar.webp"
+  }
 ]

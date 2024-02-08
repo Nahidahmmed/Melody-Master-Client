@@ -25,9 +25,7 @@ const PopularInstructors = () => {
               <h2 className="card-title text-2xl">{instructor.name}</h2>
               <small>{instructor.email}</small>
               <p>students: {instructor.numStudents}</p>
-              <div className="card-actions">
-                classes Taken: {instructor.classesTaken[0]}
-              </div>
+              
             </div>
           </div>
         ))}

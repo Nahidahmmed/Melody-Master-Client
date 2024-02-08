@@ -57,7 +57,7 @@ const InstructorsPage = () => {
               <small>{instructor.email}</small>
               <p>students: {instructor.numStudents}</p>
               <div className="card-actions">
-                classes Taken: {instructor.classesTaken[0]}
+                classes Taken: 
               </div>
             </div>
           </div>
