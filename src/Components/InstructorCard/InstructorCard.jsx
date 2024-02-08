@@ -5,10 +5,10 @@ const InstructorCard = ({ instructor }) => {
 
   return (
     <div
-  className="profile-card w-[300px] rounded-md shadow-xl overflow-hidden z-[100] relative cursor-pointer snap-start shrink-0 bg-white flex flex-col items-center justify-center gap-3 transition-all duration-300 group"
+  className="profile-card w-[350px] mx-auto rounded-md shadow-xl overflow-hidden  relative cursor-pointer snap-start shrink-0 bg-white flex flex-col items-center  gap-3 group"
 >
   <div
-    className="avatar w-[50%] h-[200px] pt-5 flex items-center justify-center flex-col gap-1"
+    className="avatar w-[50%] h-[200px] pt-5 flex items-center justify-center flex-col"
   >
     <img src={image} className='rounded-full' alt="" />
   </div>
