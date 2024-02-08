@@ -16,6 +16,7 @@ import ManageClass from "../pages/Dashboard/ManageClass";
 import Payment from "../pages/Dashboard/Payment";
 import ErrorePage from "../Components/errorePage";
 import ClassDetail from "../pages/ClassDetail/ClassDetail";
+import InstructorsDetail from "../pages/InstructorsDetail/InstructorsDetail";
 
 
 
@@ -50,6 +51,11 @@ export const router = createBrowserRouter([
         path: '/detail/:id',
         element: <ClassDetail></ClassDetail>,
         loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
+      },
+      {
+        path: '/instructorsDetail/:id',
+        element: <InstructorsDetail></InstructorsDetail>,
+        loader: ({ params }) => fetch(`http://localhost:5000/instructors/${params.id}`)
       },
     ]
   },

@@ -43,7 +43,7 @@ const InstructorCard = ({ instructor }) => {
           </li>
         </ul>
       </div>
-      <Link>
+      <Link to={`/instructorsDetail/${instructor._id}`}>
         <button className="relative overflow-hidden bg-gradient-to-br from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 mb-5">
           <span className="z-10 relative">Learn More</span>
         </button>
