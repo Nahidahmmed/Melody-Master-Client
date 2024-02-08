@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Banner from "../../Components/Banner/Banner";
 import BannerImage from "../../assets/music class image/image5.jpg";
+import InstructorCard from "../../Components/InstructorCard/InstructorCard";
 
 const InstructorsPage = () => {
   const [instructors, setInstructors] = useState([]);
@@ -45,22 +46,7 @@ const InstructorsPage = () => {
       ></Banner>
       <div className="grid pl-28 md:grid-cols-2 gap-4">
         {instructors.map((instructor) => (
-          <div
-            key={instructor._id}
-            className="card text-left card-side bg-base-100 shadow-xl w-[500px]"
-          >
-            <figure>
-              <img className="w-52 h-60" src={instructor.image} alt="Movie" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{instructor.name}</h2>
-              <small>{instructor.email}</small>
-              <p>students: {instructor.numStudents}</p>
-              <div className="card-actions">
-                classes Taken: 
-              </div>
-            </div>
-          </div>
+          <InstructorCard key={instructor._id} instructor={instructor}></InstructorCard>
         ))}
       </div>
     </div>

@@ -28,15 +28,15 @@ export default function AboutUs() {
       <div className="lg:w-[50%] mr-14 mt-12">
         <div className="parent w-full">
           <div
-            className="card lg:w-[100%]"
+            className="Card lg:w-[100%]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/94Zzx9K/image2.jpg)",
             }}
           >
             <div className="content-box">
-              <span className="card-title">About Us</span>
-              <p className="card-content">
+              <span className="Card-title">About Us</span>
+              <p className="Card-content">
                 You can learn more about our music class in melody master.
               </p>
               <Link className="see-more rounded-lg w-28">See More</Link>

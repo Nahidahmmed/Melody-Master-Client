@@ -2,14 +2,14 @@
     perspective: 1200px;
   }
   
-  .card {
+  .Card {
     height: 380px;
     border: 3px solid rgb(255, 255, 255);
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
   }
   
-  .card:hover {
+  .Card:hover {
     background-position: -100px 100px, -100px 100px;
     transform: rotate3d(0.5, 1, 0, 30deg);
   }
@@ -23,7 +23,7 @@
     transform-style: preserve-3d;
   }
   
-  .content-box .card-title {
+  .content-box .Card-title {
     display: inline-block;
     margin-left:30px;
     color: white;
@@ -33,11 +33,11 @@
     transform: translate3d(0px, 0px, 50px);
   }
   
-  .content-box .card-title:hover {
+  .content-box .Card-title:hover {
     transform: translate3d(0px, 0px, 60px);
   }
   
-  .content-box .card-content {
+  .content-box .Card-content {
     width: 53%;
     margin-top: 15px;
     margin-left: 25px;
@@ -48,7 +48,7 @@
     transform: translate3d(0px, 0px, 30px);
   }
   
-  .content-box .card-content:hover {
+  .content-box .Card-content:hover {
     transform: translate3d(0px, 0px, 60px);
   }
   
