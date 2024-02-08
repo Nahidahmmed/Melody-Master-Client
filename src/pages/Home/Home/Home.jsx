@@ -15,7 +15,7 @@ const Home = () => {
            <AboutUs></AboutUs>
             <PopularClasses></PopularClasses>
             <PopularInstructors></PopularInstructors>
-            <h1 className="text-5xl font-bold my-12 text-center">Some of our instruments</h1>
+            
             <div className="md:flex">
            <ThankYou></ThankYou>
             </div>

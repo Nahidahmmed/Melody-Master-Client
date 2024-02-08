@@ -44,7 +44,7 @@ const InstructorsPage = () => {
         }
         image={BannerImage}
       ></Banner>
-      <div className="grid pl-28 md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2">
         {instructors.map((instructor) => (
           <InstructorCard key={instructor._id} instructor={instructor}></InstructorCard>
         ))}
