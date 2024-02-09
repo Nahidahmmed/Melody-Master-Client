@@ -4,11 +4,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FaMusic } from "react-icons/fa6";
-import {
-  
-  FaSearch,
-} from "react-icons/fa";
-import "./Header/Header.css"
+import { FaSearch } from "react-icons/fa";
+import "./Header/Header.css";
 
 const Header = () => {
   // const { user, logOut } = useContext(AuthContext);
@@ -19,12 +16,10 @@ const Header = () => {
   // };
   const [classes, setClasses] = useState([]);
   useEffect(() => {
-    
     fetch("http://localhost:5000/classes")
       .then((res) => res.json())
       .then((data) => {
         setClasses(data);
-        
       });
   }, []);
 
@@ -38,34 +33,36 @@ const Header = () => {
     setSearchVisible(!isSearchVisible);
   };
 
-
   const menuItems = [
     <li>
-      <Link className="Button" to="/">Home</Link>
+      <Link className="Button" to="/">
+        Home
+      </Link>
     </li>,
     <li>
-      <Link className="Button" to={'/instructors'}>Instructors</Link>
+      <Link className="Button" to={"/instructors"}>
+        Instructors
+      </Link>
     </li>,
     <li>
-      <Link className="Button" to="/allClasses">Classes</Link>
+      <Link className="Button" to="/allClasses">
+        Classes
+      </Link>
     </li>,
     <li>
-    <Link className="Button" to="/dashboard/myCart">Dashboard</Link>
-  </li>,
-   
-       
-            
-              // <div className="avatar">
-              //   <div className="w-7 rounded-full">
-              //     <img className="" src={user?.photoURL} />
-              //   </div>
-              // </div>
-        
-       
+      <Link className="Button" to="/dashboard/myCart">
+        Dashboard
+      </Link>
+    </li>,
+
+    // <div className="avatar">
+    //   <div className="w-7 rounded-full">
+    //     <img className="" src={user?.photoURL} />
+    //   </div>
+    // </div>
   ];
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  
 
   const handleInputChange = (e) => {
     const inputText = e.target.value;
@@ -73,7 +70,7 @@ const Header = () => {
     const filteredSuggestions =
       inputText !== ""
         ? classes.filter((Class) =>
-        Class.class_name.toLowerCase().startsWith(inputText.toLowerCase())
+            Class.class_name.toLowerCase().startsWith(inputText.toLowerCase())
           )
         : [];
 
@@ -94,19 +91,19 @@ const Header = () => {
               className="lg:hidden focus:outline-none"
             >
               <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 mt-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 mt-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
             </button>
             {isMenuOpen && (
               <ul className="mt-[28px] z-10 p-2 shadow bg-black bg-opacity-80 rounded w-52 absolute">
@@ -145,10 +142,7 @@ const Header = () => {
             {suggestions.length > 0 && (
               <ul className="lg:w-[230px] w-[160px] mt-[1px] lg:mt-[123px] text-sm mr-10 p-3 shadow bg-black bg-opacity-60 rounded-b-xl absolute">
                 {suggestions.slice(0, 8).map((Class, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handleSuggestionClick(Class)}
-                  >
+                  <li key={index} onClick={() => handleSuggestionClick(Class)}>
                     <button className="pb-2">{Class.class_name}</button>
                   </li>
                 ))}
@@ -156,26 +150,41 @@ const Header = () => {
             )}
           </div>
         </div>
+        {/* profile */}
+        <div className="dropdown dropdown-end">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar"
+          >
+            <div className="w-10 rounded-full">
+              <img
+                alt="Tailwind CSS Navbar component"
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+          </div>
+          <ul
+            tabIndex={0}
+            className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </a>
+            </li>
+            <li>
+              <a>Settings</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
 };
-{/* <button
-                onClick={toggleMenu}
-                className="btn btn-ghost lg:hidden focus:outline-none"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 mt-3"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg> */}
+
 export default Header;
