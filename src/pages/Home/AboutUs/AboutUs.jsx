@@ -3,32 +3,21 @@ import "./AboutUs.css";
 export default function AboutUs() {
   return (
     <div className="lg:flex container w-full mx-auto bg-white mt-48">
-      <div className="lg:w-[50%] px-14">
-        <h2 className="text-xl font-bold text-[#3081D0]">
-          about the music school
-        </h2>
-        <h2 className="text-[35px] mt-4 font-bold text-[#333]">
-          We Provide Service since In 2008
-        </h2>
-        <p className="mt-6 text-base text-justify ">
-          Dramatically Morph Reliable Experiences Without Strategic
-          Methodologies. Quickly Create Frictionless Strategic Theme Areas.
-          Immerse Yourself In the World of Music. Explore New Sounds and
-          Vibrations. Discover the Art of Harmonious Melodies. Join a Community
-          of Music Enthusiasts. Experience the Power of Rhythm and Beats.
-          Unleash Your Creative Potential Through Music. Embrace the Magic of
-          Musical Expression Dramatically Morph Reliable Experiences Without
-          Strategic Methodologies. Quickly Create Frictionless Strategic Theme
-          Areas.
-        </p>
-        <button className="btn bg-[#CD1818] mt-5 border-none text-white">
-          LEARN MORE
-        </button>
-      </div>
-      <div className="lg:w-[50%] mr-14 mt-12">
+       <div className="lg:w-[55%] px-14">
+      <h2 className="text-xl font-bold text-blue-500">About the Music School</h2>
+      <h2 className="text-4xl mt-4 font-bold text-gray-700">Providing Service Since 2008</h2>
+      <p className="mt-6 text-base text-justify">
+        Dramatically Morph Reliable Experiences Without Strategic Methodologies. Quickly Create Frictionless Strategic Theme Areas.
+        Immerse Yourself In the World of Music. Explore New Sounds and Vibrations. Discover the Art of Harmonious Melodies.
+        Join a Community of Music Enthusiasts. Experience the Power of Rhythm and Beats. Unleash Your Creative Potential Through Music.
+        Embrace the Magic of Musical Expression Dramatically Morph Reliable Experiences Without Strategic Methodologies. Quickly Create Frictionless Strategic Theme Areas.
+      </p>
+      <button className="btn bg-red-600 mt-5 border-none text-white">LEARN MORE</button>
+    </div>
+      <div className="lg:w-[45%] mr-14 mt-12">
         <div className="parent w-full">
           <div
-            className="Card lg:w-[100%]"
+            className="Card lg:w-[100%] rounded-xl"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/94Zzx9K/image2.jpg)",

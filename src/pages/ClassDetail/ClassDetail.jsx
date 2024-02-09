@@ -19,7 +19,7 @@ function ClassDetail() {
   } = classData;
 
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden pt-24 ">
+    <div className="bg-white shadow-md rounded-lg overflow-hidden pt-[85px] ">
       <div className="lg:flex lg:flex-wrap">
         <img className="lg:w-1/2 h-64 lg:h-auto object-cover object-center" src={class_image} alt={class_name} />
         <div className="lg:w-1/2 p-6">

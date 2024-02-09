@@ -116,7 +116,7 @@ const Header = () => {
           </div>
           <Link to={"/"} className="lg:text-3xl text-lg flex items-center">
             <FaMusic className="mr-3"></FaMusic>
-            <span className="text-[#3081D0] mr-2">Travel</span>Master
+            <span className="text-[#3081D0] mr-2">Tempo</span>Tutors
           </Link>
         </div>
 

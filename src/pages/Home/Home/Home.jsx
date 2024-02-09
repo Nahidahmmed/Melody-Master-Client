@@ -5,24 +5,22 @@ import SliderSection from "../SliderSection/SliderSection";
 import ThankYou from "../ThankYou/ThankYou";
 import PopularInstructors from "../popularInstructors/PopularInstructors";
 
-
 const Home = () => {
-    return (
-        <div>
+  return (
+    <div>
+      <SliderSection></SliderSection>
+      <div className="max-w-screen-xl mx-auto">
+        <AboutUs></AboutUs>
+        <PopularClasses></PopularClasses>
+        <PopularInstructors></PopularInstructors>
 
-            <SliderSection></SliderSection>
-           <div className="max-w-screen-xl mx-auto">
-           <AboutUs></AboutUs>
-            <PopularClasses></PopularClasses>
-            <PopularInstructors></PopularInstructors>
-            
-            <div className="md:flex">
-           <ThankYou></ThankYou>
-            </div>
-            <SomeUnfo></SomeUnfo>
-           </div>
+        <div className="md:flex">
+          <ThankYou></ThankYou>
         </div>
-    );
+      </div>
+      <SomeUnfo></SomeUnfo>
+    </div>
+  );
 };
 
 export default Home;

@@ -21,18 +21,27 @@ export default function InstructorsDetail() {
     student_achievements: achievements,
   } = instructor;
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className=" items-center">
+    <div className="lg:pt-[150px] pt-[130px] max-w-screen-xl ml-4 mx-auto">
+      <div className="lg:flex">
+        <div className="lg:flex items-center mb-8 lg:mr-32 lg:w-[50%]">
           <img
             src={image}
             alt={name}
-            className="rounded-full w-48 h-48 mb-4 shadow-lg"
+            className="w-48 h-48 rounded-full object-cover"
           />
-          <h2 className="text-4xl font-semibold mb-2 text-center">{name}</h2>
-          <p className="text-xl text-gray-600 text-center">{className}</p>
+          <div className="">
+            <h1 className="text-3xl font-bold mb-3 lg:mt-0 mt-5">{name}</h1>
+            <p className="text-xl font-semibold">{className}</p>
+            <p className="text-lg font-semibold">
+              {department}, {university}
+            </p>
+            <p className="text-base font-semibold">
+              Years of Experience: <span className="">{experience}</span>
+            </p>
+            <p className="text-base font-semibold">Instrument: {instrument}</p>
+          </div>
         </div>
-        <div className="mt-8">
+        <div className="mt-3 lg:w-[50%]">
           <h3 className="text-3xl font-semibold mb-4">Contact Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -49,44 +58,67 @@ export default function InstructorsDetail() {
             </div>
             <div>
               <p className="font-semibold">Office Hours:</p>
-              <p>{officeHours}</p>
+              <p className="w-[60%]">{officeHours}</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="space-y-4">
-        <h3 className="text-3xl font-semibold mb-4">About {name}</h3>
-        <p className="text-lg">{bio}</p>
-      </div>
-      <div className="mt-8">
-        <h3 className="text-3xl font-semibold mb-4">
-          Experience and Expertise
-        </h3>
-        <div className="space-y-4">
-          <p>
-            <span className="font-semibold">Department:</span> {department}
-          </p>
-          <p>
-            <span className="font-semibold">University:</span> {university}
-          </p>
-          <p>
-            <span className="font-semibold">Main Instrument:</span> {instrument}
-          </p>
-          <p>
-            <span className="font-semibold">Years of Experience:</span>{" "}
-            {experience}
-          </p>
-          <p>
-            <span className="font-semibold">Performance Experience:</span>{" "}
-            {performance}
-          </p>
-          <p>
-            <span className="font-semibold">Teaching Approach:</span> {approach}
-          </p>
-          <p>
-            <span className="font-semibold">Student Achievements:</span>{" "}
-            {achievements}
-          </p>
+
+      <div>
+        <div className="space-y-4 lg:w-[50%] mt-10">
+          <h3 className="text-3xl font-semibold mb-4">About {name}</h3>
+          <p className="text-lg">{bio}</p>
+        </div>
+        <div className=" my-10">
+          <h3 className="text-3xl font-semibold mb-2">
+            Experience and Expertise
+          </h3>
+          <div className="space-y-2">
+            <p className="text-base">
+              <span className="font-semibold text-base">Department:</span>{" "}
+              {department}
+            </p>
+            <p className="text-base">
+              <span className="font-semibold text-base">University:</span>{" "}
+              {university}
+            </p>
+            {instrument && (
+              <p className="text-base">
+                <span className="font-semibold text-base">
+                  Main Instrument:
+                </span>{" "}
+                {instrument}
+              </p>
+            )}
+            <p className="text-base">
+              <span className="font-semibold text-base">
+                Years of Experience:
+              </span>{" "}
+              {experience}
+            </p>
+            {performance && (
+              <p className="text-base">
+                <span className="font-semibold text-base">
+                  Performance Experience:
+                </span>{" "}
+                {performance}
+              </p>
+            )}
+            <p className="text-base">
+              <span className="font-semibold text-base">
+                Teaching Approach:
+              </span>{" "}
+              {approach}
+            </p>
+            {achievements && (
+              <p className="text-base">
+                <span className="font-semibold text-base">
+                  Student Achievements:
+                </span>{" "}
+                {achievements}
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const InstructorCard = ({ instructor }) => {
   } = instructor;
 
   return (
-    <div className="profile-card w-[350px] mx-auto rounded-md  shadow-xl overflow-hidden  relative cursor-pointer snap-start shrink-0 bg-white flex flex-col items-center  gap-3 group">
+    <div className="profile-card w-[350px] mx-auto rounded-md  shadow-xl overflow-hidden  relative cursor-pointer snap-start shrink-0 bg-white flex flex-col items-center  gap-3 group transition duration-300 transform hover:scale-105">
       <div className="avatar w-[50%] h-[200px] pt-5 flex items-center justify-center flex-col">
         <img src={image} className="rounded-full" alt="" />
       </div>
